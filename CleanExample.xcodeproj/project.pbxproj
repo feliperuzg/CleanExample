@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A80C45CB1F1E98B3007F2EFA /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80C45CA1F1E98B3007F2EFA /* UserEntity.swift */; };
+		A80C45CD1F1E99CC007F2EFA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80C45CC1F1E99CC007F2EFA /* User.swift */; };
+		A80C45CF1F1E99D8007F2EFA /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80C45CE1F1E99D8007F2EFA /* NewUser.swift */; };
 		A8ACFB041F1E96770065306D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACFB031F1E96770065306D /* AppDelegate.swift */; };
-		A8ACFB061F1E96770065306D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACFB051F1E96770065306D /* ViewController.swift */; };
-		A8ACFB091F1E96770065306D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8ACFB071F1E96770065306D /* Main.storyboard */; };
 		A8ACFB0B1F1E96770065306D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8ACFB0A1F1E96770065306D /* Assets.xcassets */; };
-		A8ACFB0E1F1E96770065306D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8ACFB0C1F1E96770065306D /* LaunchScreen.storyboard */; };
 		A8ACFB191F1E96770065306D /* CleanExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACFB181F1E96770065306D /* CleanExampleTests.swift */; };
 		A8ACFB241F1E96770065306D /* CleanExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACFB231F1E96770065306D /* CleanExampleUITests.swift */; };
 /* End PBXBuildFile section */
@@ -34,12 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A80C45CA1F1E98B3007F2EFA /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		A80C45CC1F1E99CC007F2EFA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A80C45CE1F1E99D8007F2EFA /* NewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
 		A8ACFB001F1E96770065306D /* CleanExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8ACFB031F1E96770065306D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A8ACFB051F1E96770065306D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A8ACFB081F1E96770065306D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8ACFB0A1F1E96770065306D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A8ACFB0D1F1E96770065306D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8ACFB0F1F1E96770065306D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8ACFB141F1E96770065306D /* CleanExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8ACFB181F1E96770065306D /* CleanExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanExampleTests.swift; sourceTree = "<group>"; };
@@ -98,11 +98,11 @@
 			isa = PBXGroup;
 			children = (
 				A8ACFB031F1E96770065306D /* AppDelegate.swift */,
-				A8ACFB051F1E96770065306D /* ViewController.swift */,
-				A8ACFB071F1E96770065306D /* Main.storyboard */,
 				A8ACFB0A1F1E96770065306D /* Assets.xcassets */,
-				A8ACFB0C1F1E96770065306D /* LaunchScreen.storyboard */,
 				A8ACFB0F1F1E96770065306D /* Info.plist */,
+				A80C45CA1F1E98B3007F2EFA /* UserEntity.swift */,
+				A80C45CC1F1E99CC007F2EFA /* User.swift */,
+				A80C45CE1F1E99D8007F2EFA /* NewUser.swift */,
 			);
 			path = CleanExample;
 			sourceTree = "<group>";
@@ -135,6 +135,7 @@
 				A8ACFAFC1F1E96770065306D /* Sources */,
 				A8ACFAFD1F1E96770065306D /* Frameworks */,
 				A8ACFAFE1F1E96770065306D /* Resources */,
+				A8C8A8D21F1E9BED0038B3F2 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -229,9 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8ACFB0E1F1E96770065306D /* LaunchScreen.storyboard in Resources */,
 				A8ACFB0B1F1E96770065306D /* Assets.xcassets in Resources */,
-				A8ACFB091F1E96770065306D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +250,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A8C8A8D21F1E9BED0038B3F2 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A8ACFAFC1F1E96770065306D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8ACFB061F1E96770065306D /* ViewController.swift in Sources */,
+				A80C45CB1F1E98B3007F2EFA /* UserEntity.swift in Sources */,
+				A80C45CF1F1E99D8007F2EFA /* NewUser.swift in Sources */,
 				A8ACFB041F1E96770065306D /* AppDelegate.swift in Sources */,
+				A80C45CD1F1E99CC007F2EFA /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,25 +309,6 @@
 			targetProxy = A8ACFB201F1E96770065306D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A8ACFB071F1E96770065306D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A8ACFB081F1E96770065306D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A8ACFB0C1F1E96770065306D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A8ACFB0D1F1E96770065306D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A8ACFB261F1E96770065306D /* Debug */ = {
@@ -423,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2D3TXVT8E8;
 				INFOPLIST_FILE = CleanExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cl.fruz.CleanExample;
@@ -436,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2D3TXVT8E8;
 				INFOPLIST_FILE = CleanExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cl.fruz.CleanExample;
@@ -522,6 +523,7 @@
 				A8ACFB2A1F1E96770065306D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8ACFB2B1F1E96770065306D /* Build configuration list for PBXNativeTarget "CleanExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +532,7 @@
 				A8ACFB2D1F1E96770065306D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8ACFB2E1F1E96770065306D /* Build configuration list for PBXNativeTarget "CleanExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +541,7 @@
 				A8ACFB301F1E96770065306D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

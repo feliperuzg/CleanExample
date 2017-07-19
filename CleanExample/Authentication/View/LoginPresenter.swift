@@ -8,15 +8,15 @@
 
 import UIKit
 
-class LoginPresenter {
+class LoginPresenter: LoginPresenterProtocol {
     fileprivate let loginService: LoginService
-    weak fileprivate var loginView : LoginView?
+    weak fileprivate var loginView: LoginViewProtocol?
 
     init(loginService: LoginService) {
         self.loginService = loginService
     }
 
-    func attachView(_ view: LoginView) {
+    func attachView(_ view: LoginViewProtocol) {
         loginView = view
     }
 

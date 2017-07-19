@@ -1,5 +1,5 @@
 //
-//  LoginView.swift
+//  LoginViewProtocol.swift
 //  CleanExample
 //
 //  Created by Felipe Ruz on 19-07-17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol LoginView: NSObjectProtocol {
+protocol LoginViewProtocol: NSObjectProtocol {
     func showActivityIndicator()
     func hideActivityIndicator()
     func showErrorMessage(_ error: CustomError)

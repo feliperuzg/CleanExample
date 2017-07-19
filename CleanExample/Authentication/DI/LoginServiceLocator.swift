@@ -14,7 +14,7 @@ class LoginServiceLocator {
         return LoginMockApi()
     }
 
-    var dataSource: LoginDataSource {
+    var dataSource: LoginMockDataSource {
         return LoginMockDataSource(restApi: restApi)
     }
 

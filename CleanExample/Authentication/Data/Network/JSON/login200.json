@@ -1,0 +1,10 @@
+{
+    "user": {
+        "firstName": "Juan",
+        "lastName": "Perez",
+        "age": 20,
+        "email": "example@domain.com",
+        "phone": "12345678",
+        "address": "Any Street #123"
+    }
+}

@@ -9,7 +9,7 @@
 protocol User {
     var firstName: String { get }
     var lastName: String { get }
-    var age: String { get }
+    var age: Int { get }
     var phone: String { get }
     var email: String { get }
     var address: String { get }

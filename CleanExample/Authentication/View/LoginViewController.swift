@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var activityIndicatorContainer: UIView!
     let locator = LoginServiceLocator()
     var loginPresenter: LoginPresenterProtocol?
+    var alert: UIAlertController!
 
     convenience init(_ presenter: LoginPresenterProtocol) {
         self.init()
@@ -43,7 +44,7 @@ extension LoginViewController: LoginViewProtocol {
     }
 
     func showErrorMessage(_ error: CustomError) {
-        let alert = UIAlertController(title: error.localizedTitle,
+        alert = UIAlertController(title: error.localizedTitle,
                                       message: error.localizedDescription,
                                       preferredStyle: .alert)
         let aceptar = UIAlertAction(title: "Aceptar", style: .default, handler: nil)

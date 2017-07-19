@@ -15,6 +15,7 @@
 		A8ACFB041F1E96770065306D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACFB031F1E96770065306D /* AppDelegate.swift */; };
 		A8ACFB0B1F1E96770065306D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8ACFB0A1F1E96770065306D /* Assets.xcassets */; };
 		A8ACFB241F1E96770065306D /* CleanExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACFB231F1E96770065306D /* CleanExampleUITests.swift */; };
+		A8BE5D641F20148100F80C1A /* LoginViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BE5D631F20148100F80C1A /* LoginViewControllerSpec.swift */; };
 		A8C8A8D41F1EB2E20038B3F2 /* UserEntitySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8A8D31F1EB2E20038B3F2 /* UserEntitySpec.swift */; };
 		A8C8A8DD1F1EB8310038B3F2 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8A8DC1F1EB8310038B3F2 /* LoginUseCase.swift */; };
 		A8C8A8DF1F1EB9330038B3F2 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8A8DE1F1EB9330038B3F2 /* LoginRepository.swift */; };
@@ -69,6 +70,7 @@
 		A8ACFB1F1F1E96770065306D /* CleanExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8ACFB231F1E96770065306D /* CleanExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanExampleUITests.swift; sourceTree = "<group>"; };
 		A8ACFB251F1E96770065306D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8BE5D631F20148100F80C1A /* LoginViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpec.swift; sourceTree = "<group>"; };
 		A8C8A8D31F1EB2E20038B3F2 /* UserEntitySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntitySpec.swift; sourceTree = "<group>"; };
 		A8C8A8DC1F1EB8310038B3F2 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		A8C8A8DE1F1EB9330038B3F2 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				A8CF94FF1F1FF25000A4CBDA /* LoginPresenterSpec.swift */,
+				A8BE5D631F20148100F80C1A /* LoginViewControllerSpec.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				A8C8A8ED1F1F985B0038B3F2 /* CustomErrorSpec.swift in Sources */,
 				A8C8A8EF1F1F99C60038B3F2 /* LoginUseCaseSpec.swift in Sources */,
 				A8C8A8E91F1F8F720038B3F2 /* LoginMockApiSpec.swift in Sources */,
+				A8BE5D641F20148100F80C1A /* LoginViewControllerSpec.swift in Sources */,
 				A8A7229C1F1FAC4E00DF908D /* LoginRepositorySpec.swift in Sources */,
 				A8C8A8D41F1EB2E20038B3F2 /* UserEntitySpec.swift in Sources */,
 				A8CF95001F1FF25000A4CBDA /* LoginPresenterSpec.swift in Sources */,

@@ -11,7 +11,8 @@ import UIKit
 class LoginViewController: UIViewController {
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var userPassword: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var activityIndicatorContainer: UIView!
     let locator = LoginServiceLocator()
     var loginPresenter: LoginPresenterProtocol?
 
@@ -32,11 +33,13 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginViewProtocol {
     func showActivityIndicator() {
-
+        activityIndicatorContainer.isHidden = false
+        activityIndicator.startAnimating()
     }
 
     func hideActivityIndicator() {
-
+        activityIndicatorContainer.isHidden = true
+        activityIndicator.stopAnimating()
     }
 
     func showErrorMessage(_ error: CustomError) {

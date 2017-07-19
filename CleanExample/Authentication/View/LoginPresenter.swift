@@ -9,37 +9,24 @@
 import UIKit
 
 class LoginPresenter: LoginPresenterProtocol {
-    fileprivate let loginService: LoginService
+    fileprivate let loginService: LoginUseCase
     weak fileprivate var loginView: LoginViewProtocol?
 
-    init(loginService: LoginService) {
+    init(_ loginService: LoginUseCase) {
         self.loginService = loginService
     }
 
-    func attachView(_ view: LoginViewProtocol) {
-        loginView = view
+    func attachView(_ loginView: LoginViewProtocol) {
+        self.loginView = loginView
     }
 
-    func detachView() {
-        loginView = nil
+    func doLogin(_ user: String, password pass: String) {
+        self.loginView?.showActivityIndicator()
+        loginService.loginUser(withCredentials: user, password: pass, onSuccess: { [weak self] user in
+            self?.loginView?.hideActivityIndicator()
+        }) { [weak self] error in
+            self?.loginView?.hideActivityIndicator()
+            self?.loginView?.showErrorMessage(error)
+        }
     }
-
-    func doLogin(_ user: String, pass: String) {
-//        loginService.
-    }
-
-//    func getUsers() {
-//        self.userView?.startLoading()
-//        userService.getUsers{ [weak self] users in
-//            self?.userView?.finishLoading()
-//            if(users.count == 0){
-//                self?.userView?.setEmptyUsers()
-//            }else{
-//                let mappedUsers = users.map{
-//                    return UserViewData(name: "\($0.firstName) \($0.lastName)", age: "\($0.age) years")
-//                }
-//                self?.userView?.setUsers(mappedUsers)
-//            }
-//
-//        }
 }

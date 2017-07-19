@@ -14,6 +14,16 @@ struct LoginRepository<T: LoginDataSource>: LoginRepositoryProtocol where T.T ==
     func loginUser(withCredentials userName: String, password: String,
                    onSuccess: @escaping (User) -> Void,
                    onError: @escaping (CustomError) -> Void) {
-
+        datasource.loginUser(withCredentials: userName, password: password, onSuccess: { (entity) in
+            let user = NewUser(firstName: entity.firstName,
+                               lastName: entity.lastName,
+                               age: entity.age,
+                               phone: entity.phone,
+                               email: entity.email,
+                               address: entity.address)
+            onSuccess(user)
+        }) { (error) in
+            onError(error)
+        }
     }
 }

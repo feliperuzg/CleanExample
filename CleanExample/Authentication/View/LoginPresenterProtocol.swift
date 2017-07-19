@@ -10,4 +10,5 @@ import Foundation
 
 protocol LoginPresenterProtocol {
     func doLogin(_ user: String, password: String)
+    func attachView(_ loginView: LoginViewProtocol)
 }

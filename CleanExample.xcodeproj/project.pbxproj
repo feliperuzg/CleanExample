@@ -32,7 +32,6 @@
 		A8CF94F21F1FB78300A4CBDA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF94F01F1FB78300A4CBDA /* LoginViewController.swift */; };
 		A8CF94F31F1FB78300A4CBDA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CF94F11F1FB78300A4CBDA /* LoginViewController.xib */; };
 		A8CF94F51F1FB7C800A4CBDA /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF94F41F1FB7C800A4CBDA /* LoginPresenter.swift */; };
-		A8CF94F71F1FB7E000A4CBDA /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF94F61F1FB7E000A4CBDA /* LoginService.swift */; };
 		A8CF94FB1F1FC0D300A4CBDA /* LoginPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF94FA1F1FC0D300A4CBDA /* LoginPresenterProtocol.swift */; };
 		A8CF94FD1F1FC0E900A4CBDA /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF94FC1F1FC0E900A4CBDA /* LoginViewProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -86,7 +85,6 @@
 		A8CF94F01F1FB78300A4CBDA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A8CF94F11F1FB78300A4CBDA /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		A8CF94F41F1FB7C800A4CBDA /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
-		A8CF94F61F1FB7E000A4CBDA /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		A8CF94FA1F1FC0D300A4CBDA /* LoginPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocol.swift; sourceTree = "<group>"; };
 		A8CF94FC1F1FC0E900A4CBDA /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -333,7 +331,6 @@
 				A8CF94F01F1FB78300A4CBDA /* LoginViewController.swift */,
 				A8CF94F11F1FB78300A4CBDA /* LoginViewController.xib */,
 				A8CF94F41F1FB7C800A4CBDA /* LoginPresenter.swift */,
-				A8CF94F61F1FB7E000A4CBDA /* LoginService.swift */,
 				A8CF94FA1F1FC0D300A4CBDA /* LoginPresenterProtocol.swift */,
 				A8CF94FC1F1FC0E900A4CBDA /* LoginViewProtocol.swift */,
 			);
@@ -497,7 +494,6 @@
 				A8C8A8E11F1EBA5B0038B3F2 /* LoginRestApi.swift in Sources */,
 				A8C8A8E31F1EBACF0038B3F2 /* LoginMockApi.swift in Sources */,
 				A8CF94FB1F1FC0D300A4CBDA /* LoginPresenterProtocol.swift in Sources */,
-				A8CF94F71F1FB7E000A4CBDA /* LoginService.swift in Sources */,
 				A8C8A8EB1F1F97CC0038B3F2 /* CustomError.swift in Sources */,
 				A80C45CD1F1E99CC007F2EFA /* User.swift in Sources */,
 				A8CF94F51F1FB7C800A4CBDA /* LoginPresenter.swift in Sources */,

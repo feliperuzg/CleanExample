@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     convenience init(_ presenter: LoginPresenterProtocol) {
         self.init()
         loginPresenter = presenter
+        loginPresenter?.attachView(self)
     }
 
     override func viewDidLoad() {
@@ -25,6 +26,7 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func onLoginButtonTap(_ sender: Any) {
+        loginPresenter?.doLogin(userName.text!, password: userPassword.text!)
     }
 }
 
@@ -38,12 +40,11 @@ extension LoginViewController: LoginViewProtocol {
     }
 
     func showErrorMessage(_ error: CustomError) {
-
-    }
-}
-
-extension LoginViewController: LoginPresenterProtocol {
-    func doLogin(_ user: String, password: String) {
-
+        let alert = UIAlertController(title: error.localizedTitle,
+                                      message: error.localizedDescription,
+                                      preferredStyle: .alert)
+        let aceptar = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+        alert.addAction(aceptar)
+        present(alert, animated: true, completion: nil)
     }
 }

@@ -16,10 +16,10 @@ class LoginMockDataSource: LoginDataSource {
     }
 
     func loginUser(withCredentials userName: String, password: String,
-                   onSuccess: @escaping (UserEntity) -> Void,
+                   onSuccess: @escaping (UserEntity, String) -> Void,
                    onError: @escaping (CustomError) -> Void) {
-        restApi.loginUser(withCredentials: userName, password: password, onSuccess: { (entity) in
-            onSuccess(entity)
+        restApi.loginUser(withCredentials: userName, password: password, onSuccess: { (entity, token) in
+            onSuccess(entity, token)
         }) { (error) in
             onError(error)
         }

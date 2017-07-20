@@ -8,6 +8,6 @@
 
 protocol LoginRestApi {
     func loginUser(withCredentials userName: String, password: String,
-                   onSuccess: @escaping (UserEntity) -> Void,
+                   onSuccess: @escaping (UserEntity, String) -> Void,
                    onError: @escaping (CustomError) -> Void)
 }

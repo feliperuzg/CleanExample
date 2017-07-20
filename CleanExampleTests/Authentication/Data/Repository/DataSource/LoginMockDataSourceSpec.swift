@@ -15,7 +15,7 @@ class LoginMockDataSourceSpec: XCTestCase {
         let sut = locator.dataSource
         let exp = expectation(description: "testLoginDataSourceCanReturnEntity")
 
-        sut.loginUser(withCredentials: "Juan", password: "1234", onSuccess: { (entity) in
+        sut.loginUser(withCredentials: "Juan", password: "1234", onSuccess: { (entity, token) in
             XCTAssertNotNil(entity)
             exp.fulfill()
         }) { (error) in
@@ -29,7 +29,7 @@ class LoginMockDataSourceSpec: XCTestCase {
     func testLoginDataSourceCanReturnError() {
         let sut = locator.dataSource
         let exp = expectation(description: "testLoginDataSourceCanReturnError")
-        sut.loginUser(withCredentials: "", password: "", onSuccess: { (entity) in
+        sut.loginUser(withCredentials: "", password: "", onSuccess: { (entity, token) in
             XCTFail()
             exp.fulfill()
         }) { (error) in

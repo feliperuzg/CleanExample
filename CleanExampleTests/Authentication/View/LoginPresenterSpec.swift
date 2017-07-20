@@ -29,12 +29,12 @@ class LoginViewMock: NSObject, LoginViewProtocol {
 
 class LoginApiMock: LoginMockApi {
     override func loginUser(withCredentials userName: String, password: String,
-                            onSuccess: @escaping (UserEntity) -> Void,
+                            onSuccess: @escaping (UserEntity, String) -> Void,
                             onError: @escaping (CustomError) -> Void) {
         if userName.isEmpty || password.isEmpty {
             onError(error)
         } else {
-            onSuccess(UserEntity(fromDictionary: response))
+            onSuccess(UserEntity(fromDictionary: response), token)
         }
     }
 }

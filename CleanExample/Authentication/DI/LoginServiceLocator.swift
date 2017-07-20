@@ -9,7 +9,7 @@
 import Foundation
 
 class LoginServiceLocator {
-
+    let storageLocator = StorageServiceLocator()
     var restApi: LoginRestApi {
         return LoginMockApi()
     }
@@ -23,7 +23,6 @@ class LoginServiceLocator {
     }
 
     var useCases: LoginUseCase {
-        return LoginUseCase(repository: repository)
+        return LoginUseCase(repository: repository, storageRepository: storageLocator.repository)
     }
-
 }

@@ -10,6 +10,14 @@
 		A80C45CB1F1E98B3007F2EFA /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80C45CA1F1E98B3007F2EFA /* UserEntity.swift */; };
 		A80C45CD1F1E99CC007F2EFA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80C45CC1F1E99CC007F2EFA /* User.swift */; };
 		A80C45CF1F1E99D8007F2EFA /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80C45CE1F1E99D8007F2EFA /* NewUser.swift */; };
+		A860515B1F21039E0048C86E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A860515A1F21039E0048C86E /* RootViewController.swift */; };
+		A86051671F21334F0048C86E /* StorageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86051661F21334F0048C86E /* StorageDataSource.swift */; };
+		A86051691F2134460048C86E /* UserDefaultsStorageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86051681F2134460048C86E /* UserDefaultsStorageDataSource.swift */; };
+		A860516B1F21362B0048C86E /* StorageRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A860516A1F21362B0048C86E /* StorageRepositoryProtocol.swift */; };
+		A860516D1F2136C80048C86E /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A860516C1F2136C80048C86E /* UserDefaultsRepository.swift */; };
+		A860516F1F2139B00048C86E /* StorageServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A860516E1F2139B00048C86E /* StorageServiceLocator.swift */; };
+		A86051751F214B090048C86E /* UserDefaultsStorageDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86051741F214B090048C86E /* UserDefaultsStorageDataSourceSpec.swift */; };
+		A86051771F214B320048C86E /* UserDefaultsRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86051761F214B320048C86E /* UserDefaultsRepositorySpec.swift */; };
 		A8A7229C1F1FAC4E00DF908D /* LoginRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7229B1F1FAC4E00DF908D /* LoginRepositorySpec.swift */; };
 		A8A7229E1F1FAE3700DF908D /* LoginServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7229D1F1FAE3700DF908D /* LoginServiceLocator.swift */; };
 		A8ACFB041F1E96770065306D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACFB031F1E96770065306D /* AppDelegate.swift */; };
@@ -59,6 +67,14 @@
 		A80C45CA1F1E98B3007F2EFA /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		A80C45CC1F1E99CC007F2EFA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A80C45CE1F1E99D8007F2EFA /* NewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
+		A860515A1F21039E0048C86E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		A86051661F21334F0048C86E /* StorageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageDataSource.swift; sourceTree = "<group>"; };
+		A86051681F2134460048C86E /* UserDefaultsStorageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorageDataSource.swift; sourceTree = "<group>"; };
+		A860516A1F21362B0048C86E /* StorageRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageRepositoryProtocol.swift; sourceTree = "<group>"; };
+		A860516C1F2136C80048C86E /* UserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepository.swift; sourceTree = "<group>"; };
+		A860516E1F2139B00048C86E /* StorageServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceLocator.swift; sourceTree = "<group>"; };
+		A86051741F214B090048C86E /* UserDefaultsStorageDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorageDataSourceSpec.swift; sourceTree = "<group>"; };
+		A86051761F214B320048C86E /* UserDefaultsRepositorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepositorySpec.swift; sourceTree = "<group>"; };
 		A8A7229B1F1FAC4E00DF908D /* LoginRepositorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositorySpec.swift; sourceTree = "<group>"; };
 		A8A7229D1F1FAE3700DF908D /* LoginServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceLocator.swift; sourceTree = "<group>"; };
 		A8ACFB001F1E96770065306D /* CleanExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +134,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A860515C1F21326C0048C86E /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				A860515D1F2132860048C86E /* Data */,
+				A860515E1F2132920048C86E /* DI */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		A860515D1F2132860048C86E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A86051621F2132B50048C86E /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A860515E1F2132920048C86E /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				A860516E1F2139B00048C86E /* StorageServiceLocator.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		A86051621F2132B50048C86E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A86051641F2132CC0048C86E /* DataSource */,
+				A860516A1F21362B0048C86E /* StorageRepositoryProtocol.swift */,
+				A860516C1F2136C80048C86E /* UserDefaultsRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A86051641F2132CC0048C86E /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				A86051661F21334F0048C86E /* StorageDataSource.swift */,
+				A86051681F2134460048C86E /* UserDefaultsStorageDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		A86051701F214AD80048C86E /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				A86051711F214ADF0048C86E /* Data */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		A86051711F214ADF0048C86E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A86051721F214AE70048C86E /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A86051721F214AE70048C86E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A86051731F214AEE0048C86E /* DataSource */,
+				A86051761F214B320048C86E /* UserDefaultsRepositorySpec.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A86051731F214AEE0048C86E /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				A86051741F214B090048C86E /* UserDefaultsStorageDataSourceSpec.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		A88905AB1F1FA79F00298185 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,11 +306,13 @@
 		A8ACFB021F1E96770065306D /* CleanExample */ = {
 			isa = PBXGroup;
 			children = (
+				A860515C1F21326C0048C86E /* Storage */,
 				A8ACFB031F1E96770065306D /* AppDelegate.swift */,
 				A8ACFB0A1F1E96770065306D /* Assets.xcassets */,
 				A88905AB1F1FA79F00298185 /* Authentication */,
 				A88905AC1F1FA7CE00298185 /* Global Helpers */,
 				A8ACFB0F1F1E96770065306D /* Info.plist */,
+				A860515A1F21039E0048C86E /* RootViewController.swift */,
 			);
 			path = CleanExample;
 			sourceTree = "<group>";
@@ -225,6 +320,7 @@
 		A8ACFB171F1E96770065306D /* CleanExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				A86051701F214AD80048C86E /* Storage */,
 				A8A722931F1FA9EF00DF908D /* Authentication */,
 				A8A722941F1FA9F800DF908D /* Global Helpers */,
 				A8ACFB1A1F1E96770065306D /* Info.plist */,
@@ -502,13 +598,19 @@
 			files = (
 				A8CF94F21F1FB78300A4CBDA /* LoginViewController.swift in Sources */,
 				A8C8A8F61F1F9BEA0038B3F2 /* LoginMockDataSource.swift in Sources */,
+				A860515B1F21039E0048C86E /* RootViewController.swift in Sources */,
+				A860516F1F2139B00048C86E /* StorageServiceLocator.swift in Sources */,
 				A80C45CB1F1E98B3007F2EFA /* UserEntity.swift in Sources */,
 				A80C45CF1F1E99D8007F2EFA /* NewUser.swift in Sources */,
 				A8ACFB041F1E96770065306D /* AppDelegate.swift in Sources */,
 				A8C8A8E11F1EBA5B0038B3F2 /* LoginRestApi.swift in Sources */,
 				A8C8A8E31F1EBACF0038B3F2 /* LoginMockApi.swift in Sources */,
 				A8CF94FB1F1FC0D300A4CBDA /* LoginPresenterProtocol.swift in Sources */,
+				A86051671F21334F0048C86E /* StorageDataSource.swift in Sources */,
+				A860516B1F21362B0048C86E /* StorageRepositoryProtocol.swift in Sources */,
 				A8C8A8EB1F1F97CC0038B3F2 /* CustomError.swift in Sources */,
+				A860516D1F2136C80048C86E /* UserDefaultsRepository.swift in Sources */,
+				A86051691F2134460048C86E /* UserDefaultsStorageDataSource.swift in Sources */,
 				A80C45CD1F1E99CC007F2EFA /* User.swift in Sources */,
 				A8CF94F51F1FB7C800A4CBDA /* LoginPresenter.swift in Sources */,
 				A8CF94FD1F1FC0E900A4CBDA /* LoginViewProtocol.swift in Sources */,
@@ -525,6 +627,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8C8A8ED1F1F985B0038B3F2 /* CustomErrorSpec.swift in Sources */,
+				A86051751F214B090048C86E /* UserDefaultsStorageDataSourceSpec.swift in Sources */,
+				A86051771F214B320048C86E /* UserDefaultsRepositorySpec.swift in Sources */,
 				A8C8A8EF1F1F99C60038B3F2 /* LoginUseCaseSpec.swift in Sources */,
 				A8C8A8E91F1F8F720038B3F2 /* LoginMockApiSpec.swift in Sources */,
 				A8BE5D641F20148100F80C1A /* LoginViewControllerSpec.swift in Sources */,

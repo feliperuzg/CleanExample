@@ -14,7 +14,7 @@ class LoginRepositorySpec: XCTestCase {
     func testLoginRepositoryCanSuccsessfullyLoginUser() {
         let sut = locator.repository
         let exp = expectation(description: "testLoginRepositoryCanSuccsessfullyLoginUser")
-        sut.loginUser(withCredentials: "Juan", password: "1234", onSuccess: { (user) in
+        sut.loginUser(withCredentials: "Juan", password: "1234", onSuccess: { (user, token) in
             XCTAssertNotNil(user)
             exp.fulfill()
         }) { (error) in
@@ -27,7 +27,7 @@ class LoginRepositorySpec: XCTestCase {
     func testLoginRepositoryCanShowFailureLoginUser() {
         let sut = locator.repository
         let exp = expectation(description: "testLoginRepositoryCanShowFailureLoginUser")
-        sut.loginUser(withCredentials: "", password: "1234", onSuccess: { (user) in
+        sut.loginUser(withCredentials: "", password: "1234", onSuccess: { (user, token) in
             XCTFail()
             exp.fulfill()
         }) { (error) in

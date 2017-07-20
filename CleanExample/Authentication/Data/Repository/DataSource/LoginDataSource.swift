@@ -11,6 +11,6 @@ protocol LoginDataSource {
     associatedtype T
     // swiftlint:enable type_name
     func loginUser(withCredentials userName: String, password: String,
-                   onSuccess: @escaping (T) -> Void,
+                   onSuccess: @escaping (T, String) -> Void,
                    onError: @escaping (CustomError) -> Void)
 }

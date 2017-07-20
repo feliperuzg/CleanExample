@@ -8,6 +8,6 @@
 
 protocol LoginRepositoryProtocol {
     func loginUser(withCredentials userName: String, password: String,
-                   onSuccess: @escaping (User) -> Void,
+                   onSuccess: @escaping (User, String) -> Void,
                    onError: @escaping (CustomError) -> Void)
 }

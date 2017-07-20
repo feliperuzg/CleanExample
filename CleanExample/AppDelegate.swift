@@ -14,11 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
+        let rootViewController = RootViewController()
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let locator = LoginServiceLocator()
-        let presenter = LoginPresenter(locator.useCases)
-        let rootViewController = LoginViewController(presenter)
         self.window?.rootViewController = rootViewController
         self.window?.makeKeyAndVisible()
         return true

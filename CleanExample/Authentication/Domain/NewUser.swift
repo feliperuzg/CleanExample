@@ -13,4 +13,13 @@ struct NewUser: User {
     var phone: String
     var email: String
     var address: String
+
+    init(fromEntity  entity: UserEntity) {
+        firstName = entity.firstName
+        lastName = entity.lastName
+        age = entity.age
+        phone = entity.phone
+        email = entity.email
+        address = entity.address
+    }
 }

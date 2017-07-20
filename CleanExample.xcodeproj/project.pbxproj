@@ -121,10 +121,10 @@
 		A88905AB1F1FA79F00298185 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				A8CF94EF1F1FB65600A4CBDA /* View */,
+				A8C8A8D51F1EB7370038B3F2 /* Data */,
 				A8C8A8DB1F1EB7CE0038B3F2 /* DI */,
 				A8C8A8D91F1EB7B30038B3F2 /* Domain */,
-				A8C8A8D51F1EB7370038B3F2 /* Data */,
+				A8CF94EF1F1FB65600A4CBDA /* View */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -140,9 +140,9 @@
 		A8A722931F1FA9EF00DF908D /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				A8CF94FE1F1FF1D600A4CBDA /* View */,
 				A8A722961F1FAA0B00DF908D /* Data */,
 				A8A722951F1FAA0600DF908D /* Domain */,
+				A8CF94FE1F1FF1D600A4CBDA /* View */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";

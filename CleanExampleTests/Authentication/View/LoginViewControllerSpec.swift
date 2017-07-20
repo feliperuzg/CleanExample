@@ -23,12 +23,12 @@ class LoginViewControllerSpec: XCTestCase {
         sut = LoginViewController()
         sut.loadView()
     }
-    
+
     override func tearDown() {
         super.tearDown()
         sut = nil
     }
-    
+
     func testViewDisplaysIndicatorView() {
         XCTAssertFalse(sut.activityIndicator.isAnimating)
         sut.showActivityIndicator()

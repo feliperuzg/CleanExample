@@ -1,5 +1,5 @@
 //
-//  LoginMockApi.swift
+//  AuthenticationMockApi.swift
 //  CleanExample
 //
 //  Created by Felipe Ruz on 18-07-17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LoginMockApi: LoginRestApi {
+class AuthenticationMockApi: AuthenticationRestApi {
     let response = ["firstName": "Juan",
                     "lastName": "Perez",
                     "age": 20,
@@ -18,7 +18,7 @@ class LoginMockApi: LoginRestApi {
     let error = CustomError(localizedTitle: "BAD REQUEST", localizedDescription: "BAD REQUEST", code: 400)
     let token = "asdfghjkl1234567890"
 
-    func loginUser(withCredentials userName: String, password: String,
+    func executeLogin(withCredentials userName: String, password: String,
                    onSuccess: @escaping (UserEntity, String) -> Void,
                    onError: @escaping (CustomError) -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

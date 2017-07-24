@@ -1,5 +1,5 @@
 //
-//  LoginMockDataSource.swift
+//  AuthenticationMockDataSource.swift
 //  CleanExample
 //
 //  Created by Felipe Ruz on 19-07-17.
@@ -8,17 +8,17 @@
 
 import Foundation
 
-class LoginMockDataSource: LoginDataSource {
-    let restApi: LoginRestApi
+class AuthenticationMockDataSource: AuthenticationDataSource {
+    let restApi: AuthenticationRestApi
 
-    init(restApi: LoginRestApi) {
+    init(restApi: AuthenticationRestApi) {
         self.restApi = restApi
     }
 
-    func loginUser(withCredentials userName: String, password: String,
+    func executeLogin(withCredentials userName: String, password: String,
                    onSuccess: @escaping (UserEntity, String) -> Void,
                    onError: @escaping (CustomError) -> Void) {
-        restApi.loginUser(withCredentials: userName, password: password, onSuccess: { (entity, token) in
+        restApi.executeLogin(withCredentials: userName, password: password, onSuccess: { (entity, token) in
             onSuccess(entity, token)
         }) { (error) in
             onError(error)

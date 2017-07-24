@@ -9,7 +9,7 @@
 import UIKit
 
 class RootViewController: UINavigationController {
-    let loginLocator = LoginServiceLocator()
+    let authenticationLocator = AuthenticationServiceLocator()
     var loginView: LoginViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +17,7 @@ class RootViewController: UINavigationController {
     }
 
     func showLogin() {
-        let presenter = LoginPresenter(loginLocator.useCases)
+        let presenter = LoginPresenter(authenticationLocator.useCases)
         loginView = LoginViewController(presenter)
         loginView.view.frame = UIScreen.main.bounds
         addChildViewController(loginView)

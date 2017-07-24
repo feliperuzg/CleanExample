@@ -27,10 +27,10 @@ class LoginViewMock: NSObject, LoginViewProtocol {
     }
 }
 
-class LoginApiMock: LoginMockApi {
-    override func loginUser(withCredentials userName: String, password: String,
-                            onSuccess: @escaping (UserEntity, String) -> Void,
-                            onError: @escaping (CustomError) -> Void) {
+class AuthenticationApiMock: AuthenticationMockApi {
+    override func executeLogin(withCredentials userName: String, password: String,
+                               onSuccess: @escaping (UserEntity, String) -> Void,
+                               onError: @escaping (CustomError) -> Void) {
         if userName.isEmpty || password.isEmpty {
             onError(error)
         } else {
@@ -39,15 +39,15 @@ class LoginApiMock: LoginMockApi {
     }
 }
 
-class MockServiceLocator: LoginServiceLocator {
-    override var restApi: LoginRestApi {
-        return LoginApiMock()
+class MockServiceLocator: AuthenticationServiceLocator {
+    override var restApi: AuthenticationRestApi {
+        return AuthenticationApiMock()
     }
 }
 
 class LoginPresenterSpec: XCTestCase {
     var sut: LoginPresenterProtocol!
-    let locator = LoginServiceLocator()
+    let locator = AuthenticationServiceLocator()
     let fakeLocator = MockServiceLocator()
 
     override func tearDown() {

@@ -19,8 +19,8 @@ class AuthenticationMockApi: AuthenticationRestApi {
     let token = "asdfghjkl1234567890"
 
     func executeLogin(withCredentials userName: String, password: String,
-                   onSuccess: @escaping (UserEntity, String) -> Void,
-                   onError: @escaping (CustomError) -> Void) {
+                      onSuccess: @escaping (UserEntity, String) -> Void,
+                      onError: @escaping (CustomError) -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             if userName.isEmpty || password.isEmpty {
                 onError(self.error)

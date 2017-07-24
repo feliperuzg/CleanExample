@@ -1,5 +1,5 @@
 //
-//  LoginMockApiSpec.swift
+//  AuthenticationMockApiSpec.swift
 //  CleanExampleTests
 //
 //  Created by Felipe Ruz on 19-07-17.
@@ -8,12 +8,12 @@
 
 import XCTest
 @testable import CleanExample
-class LoginMockApiSpec: XCTestCase {
-    var sut: LoginMockApi!
+class AuthenticationMockApiSpec: XCTestCase {
+    var sut: AuthenticationMockApi!
 
     override func setUp() {
         super.setUp()
-        sut = LoginMockApi()
+        sut = AuthenticationMockApi()
     }
 
     override func tearDown() {
@@ -23,9 +23,10 @@ class LoginMockApiSpec: XCTestCase {
 
     func testApiCanReturnEntity() {
         let exp = expectation(description: "testApiCanReturnEntity")
-        sut.loginUser(withCredentials: "user", password: "pass", onSuccess: { (entity, token) in
+        sut.executeLogin(withCredentials: "user", password: "pass", onSuccess: { (entity, token) in
             XCTAssertNotNil(entity)
             XCTAssertEqual(entity.firstName, "Juan")
+            XCTAssertEqual(token, "asdfghjkl1234567890")
             exp.fulfill()
         }) { (error) in
             XCTFail(error.localizedDescription)
@@ -36,8 +37,8 @@ class LoginMockApiSpec: XCTestCase {
 
     func testApiCanHanldeError() {
         let exp = expectation(description: "testApiCanHanldeError")
-        sut.loginUser(withCredentials: "", password: "pass", onSuccess: { (entity, token) in
-            XCTFail()
+        sut.executeLogin(withCredentials: "", password: "pass", onSuccess: { (entity, token) in
+            XCTFail("Neither Token \(token) or UserEntity: \(entity.firstName) have use here")
             exp.fulfill()
         }) { (error) in
             XCTAssertNotNil(error)

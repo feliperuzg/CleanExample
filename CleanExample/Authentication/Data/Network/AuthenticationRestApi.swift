@@ -8,6 +8,6 @@
 
 protocol AuthenticationRestApi {
     func executeLogin(withCredentials userName: String, password: String,
-                   onSuccess: @escaping (UserEntity, String) -> Void,
-                   onError: @escaping (CustomError) -> Void)
+                      onSuccess: @escaping (UserEntity, String) -> Void,
+                      onError: @escaping (CustomError) -> Void)
 }

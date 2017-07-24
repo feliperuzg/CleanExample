@@ -16,8 +16,8 @@ class AuthenticationMockDataSource: AuthenticationDataSource {
     }
 
     func executeLogin(withCredentials userName: String, password: String,
-                   onSuccess: @escaping (UserEntity, String) -> Void,
-                   onError: @escaping (CustomError) -> Void) {
+                      onSuccess: @escaping (UserEntity, String) -> Void,
+                      onError: @escaping (CustomError) -> Void) {
         restApi.executeLogin(withCredentials: userName, password: password, onSuccess: { (entity, token) in
             onSuccess(entity, token)
         }) { (error) in

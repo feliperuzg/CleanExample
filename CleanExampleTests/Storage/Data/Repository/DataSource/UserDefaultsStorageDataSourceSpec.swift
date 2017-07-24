@@ -13,12 +13,12 @@ class UserDefaultsStorageDataSourceSpec: XCTestCase {
     override func setUp() {
         super.setUp()
     }
-    
+
     override func tearDown() {
         super.tearDown()
         UserDefaults.standard.removeObject(forKey: "token")
     }
-    
+
     func testDatasourceCanStoreToken() {
         let sut = locator.dataSource
         sut.saveAuthToken("1234")

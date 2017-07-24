@@ -18,7 +18,7 @@
 		A860516F1F2139B00048C86E /* StorageServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A860516E1F2139B00048C86E /* StorageServiceLocator.swift */; };
 		A86051751F214B090048C86E /* UserDefaultsStorageDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86051741F214B090048C86E /* UserDefaultsStorageDataSourceSpec.swift */; };
 		A86051771F214B320048C86E /* UserDefaultsRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86051761F214B320048C86E /* UserDefaultsRepositorySpec.swift */; };
-		A8A7229C1F1FAC4E00DF908D /* LoginRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7229B1F1FAC4E00DF908D /* LoginRepositorySpec.swift */; };
+		A8A7229C1F1FAC4E00DF908D /* AuthenticationRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7229B1F1FAC4E00DF908D /* AuthenticationRepositorySpec.swift */; };
 		A8A7229E1F1FAE3700DF908D /* AuthenticationServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7229D1F1FAE3700DF908D /* AuthenticationServiceLocator.swift */; };
 		A8ACFB041F1E96770065306D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACFB031F1E96770065306D /* AppDelegate.swift */; };
 		A8ACFB0B1F1E96770065306D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8ACFB0A1F1E96770065306D /* Assets.xcassets */; };
@@ -30,14 +30,14 @@
 		A8C8A8E11F1EBA5B0038B3F2 /* AuthenticationRestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8A8E01F1EBA5B0038B3F2 /* AuthenticationRestApi.swift */; };
 		A8C8A8E31F1EBACF0038B3F2 /* AuthenticationMockApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8A8E21F1EBACF0038B3F2 /* AuthenticationMockApi.swift */; };
 		A8C8A8E61F1EBAFE0038B3F2 /* login200.json in Resources */ = {isa = PBXBuildFile; fileRef = A8C8A8E51F1EBAFE0038B3F2 /* login200.json */; };
-		A8C8A8E91F1F8F720038B3F2 /* LoginMockApiSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8A8E81F1F8F720038B3F2 /* LoginMockApiSpec.swift */; };
+		A8C8A8E91F1F8F720038B3F2 /* AuthenticationMockApiSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8A8E81F1F8F720038B3F2 /* AuthenticationMockApiSpec.swift */; };
 		A8C8A8EB1F1F97CC0038B3F2 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8A8EA1F1F97CC0038B3F2 /* CustomError.swift */; };
 		A8C8A8ED1F1F985B0038B3F2 /* CustomErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8A8EC1F1F985B0038B3F2 /* CustomErrorSpec.swift */; };
-		A8C8A8EF1F1F99C60038B3F2 /* LoginUseCaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8A8EE1F1F99C60038B3F2 /* LoginUseCaseSpec.swift */; };
+		A8C8A8EF1F1F99C60038B3F2 /* AuthenticationUseCaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8A8EE1F1F99C60038B3F2 /* AuthenticationUseCaseSpec.swift */; };
 		A8C8A8F11F1F9B0D0038B3F2 /* AuthenticationRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8A8F01F1F9B0D0038B3F2 /* AuthenticationRepositoryProtocol.swift */; };
 		A8C8A8F41F1F9B920038B3F2 /* AuthenticationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8A8F31F1F9B920038B3F2 /* AuthenticationDataSource.swift */; };
 		A8C8A8F61F1F9BEA0038B3F2 /* AuthenticationMockDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8A8F51F1F9BEA0038B3F2 /* AuthenticationMockDataSource.swift */; };
-		A8CF94EE1F1FB12A00A4CBDA /* LoginMockDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF94ED1F1FB12A00A4CBDA /* LoginMockDataSourceSpec.swift */; };
+		A8CF94EE1F1FB12A00A4CBDA /* AuthenticationMockDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF94ED1F1FB12A00A4CBDA /* AuthenticationMockDataSourceSpec.swift */; };
 		A8CF94F21F1FB78300A4CBDA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF94F01F1FB78300A4CBDA /* LoginViewController.swift */; };
 		A8CF94F31F1FB78300A4CBDA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CF94F11F1FB78300A4CBDA /* LoginViewController.xib */; };
 		A8CF94F51F1FB7C800A4CBDA /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF94F41F1FB7C800A4CBDA /* LoginPresenter.swift */; };
@@ -75,7 +75,7 @@
 		A860516E1F2139B00048C86E /* StorageServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceLocator.swift; sourceTree = "<group>"; };
 		A86051741F214B090048C86E /* UserDefaultsStorageDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorageDataSourceSpec.swift; sourceTree = "<group>"; };
 		A86051761F214B320048C86E /* UserDefaultsRepositorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepositorySpec.swift; sourceTree = "<group>"; };
-		A8A7229B1F1FAC4E00DF908D /* LoginRepositorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositorySpec.swift; sourceTree = "<group>"; };
+		A8A7229B1F1FAC4E00DF908D /* AuthenticationRepositorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepositorySpec.swift; sourceTree = "<group>"; };
 		A8A7229D1F1FAE3700DF908D /* AuthenticationServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceLocator.swift; sourceTree = "<group>"; };
 		A8ACFB001F1E96770065306D /* CleanExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8ACFB031F1E96770065306D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,14 +93,14 @@
 		A8C8A8E01F1EBA5B0038B3F2 /* AuthenticationRestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRestApi.swift; sourceTree = "<group>"; };
 		A8C8A8E21F1EBACF0038B3F2 /* AuthenticationMockApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationMockApi.swift; sourceTree = "<group>"; };
 		A8C8A8E51F1EBAFE0038B3F2 /* login200.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = login200.json; sourceTree = "<group>"; };
-		A8C8A8E81F1F8F720038B3F2 /* LoginMockApiSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMockApiSpec.swift; sourceTree = "<group>"; };
+		A8C8A8E81F1F8F720038B3F2 /* AuthenticationMockApiSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationMockApiSpec.swift; sourceTree = "<group>"; };
 		A8C8A8EA1F1F97CC0038B3F2 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		A8C8A8EC1F1F985B0038B3F2 /* CustomErrorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrorSpec.swift; sourceTree = "<group>"; };
-		A8C8A8EE1F1F99C60038B3F2 /* LoginUseCaseSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseSpec.swift; sourceTree = "<group>"; };
+		A8C8A8EE1F1F99C60038B3F2 /* AuthenticationUseCaseSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUseCaseSpec.swift; sourceTree = "<group>"; };
 		A8C8A8F01F1F9B0D0038B3F2 /* AuthenticationRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepositoryProtocol.swift; sourceTree = "<group>"; };
 		A8C8A8F31F1F9B920038B3F2 /* AuthenticationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDataSource.swift; sourceTree = "<group>"; };
 		A8C8A8F51F1F9BEA0038B3F2 /* AuthenticationMockDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationMockDataSource.swift; sourceTree = "<group>"; };
-		A8CF94ED1F1FB12A00A4CBDA /* LoginMockDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMockDataSourceSpec.swift; sourceTree = "<group>"; };
+		A8CF94ED1F1FB12A00A4CBDA /* AuthenticationMockDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationMockDataSourceSpec.swift; sourceTree = "<group>"; };
 		A8CF94F01F1FB78300A4CBDA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A8CF94F11F1FB78300A4CBDA /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		A8CF94F41F1FB7C800A4CBDA /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -251,7 +251,7 @@
 		A8A722951F1FAA0600DF908D /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				A8C8A8EE1F1F99C60038B3F2 /* LoginUseCaseSpec.swift */,
+				A8C8A8EE1F1F99C60038B3F2 /* AuthenticationUseCaseSpec.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -269,7 +269,7 @@
 		A8A722981F1FAA4300DF908D /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				A8C8A8E81F1F8F720038B3F2 /* LoginMockApiSpec.swift */,
+				A8C8A8E81F1F8F720038B3F2 /* AuthenticationMockApiSpec.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -278,7 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				A8CF94EC1F1FB10F00A4CBDA /* DataSource */,
-				A8A7229B1F1FAC4E00DF908D /* LoginRepositorySpec.swift */,
+				A8A7229B1F1FAC4E00DF908D /* AuthenticationRepositorySpec.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -421,7 +421,7 @@
 		A8CF94EC1F1FB10F00A4CBDA /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				A8CF94ED1F1FB12A00A4CBDA /* LoginMockDataSourceSpec.swift */,
+				A8CF94ED1F1FB12A00A4CBDA /* AuthenticationMockDataSourceSpec.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -629,13 +629,13 @@
 				A8C8A8ED1F1F985B0038B3F2 /* CustomErrorSpec.swift in Sources */,
 				A86051751F214B090048C86E /* UserDefaultsStorageDataSourceSpec.swift in Sources */,
 				A86051771F214B320048C86E /* UserDefaultsRepositorySpec.swift in Sources */,
-				A8C8A8EF1F1F99C60038B3F2 /* LoginUseCaseSpec.swift in Sources */,
-				A8C8A8E91F1F8F720038B3F2 /* LoginMockApiSpec.swift in Sources */,
+				A8C8A8EF1F1F99C60038B3F2 /* AuthenticationUseCaseSpec.swift in Sources */,
+				A8C8A8E91F1F8F720038B3F2 /* AuthenticationMockApiSpec.swift in Sources */,
 				A8BE5D641F20148100F80C1A /* LoginViewControllerSpec.swift in Sources */,
-				A8A7229C1F1FAC4E00DF908D /* LoginRepositorySpec.swift in Sources */,
+				A8A7229C1F1FAC4E00DF908D /* AuthenticationRepositorySpec.swift in Sources */,
 				A8C8A8D41F1EB2E20038B3F2 /* UserEntitySpec.swift in Sources */,
 				A8CF95001F1FF25000A4CBDA /* LoginPresenterSpec.swift in Sources */,
-				A8CF94EE1F1FB12A00A4CBDA /* LoginMockDataSourceSpec.swift in Sources */,
+				A8CF94EE1F1FB12A00A4CBDA /* AuthenticationMockDataSourceSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

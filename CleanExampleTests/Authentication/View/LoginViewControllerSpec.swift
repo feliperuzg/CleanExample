@@ -51,7 +51,7 @@ class LoginViewControllerSpec: XCTestCase {
     }
 
     func testLoginButtonCallsPresenter() {
-        let locator = LoginServiceLocator()
+        let locator = AuthenticationServiceLocator()
         let presenter = MockPresenter(locator.useCases)
         sut = LoginViewController(presenter)
         sut.loadView()

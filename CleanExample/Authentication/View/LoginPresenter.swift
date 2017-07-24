@@ -24,6 +24,7 @@ class LoginPresenter: LoginPresenterProtocol {
         self.loginView?.showActivityIndicator()
         loginService.executeLogin(withCredentials: user, password: pass, onSuccess: { [weak self] user in
             self?.loginView?.hideActivityIndicator()
+            print(user.firstName)
         }) { [weak self] error in
             self?.loginView?.hideActivityIndicator()
             self?.loginView?.showErrorMessage(error)

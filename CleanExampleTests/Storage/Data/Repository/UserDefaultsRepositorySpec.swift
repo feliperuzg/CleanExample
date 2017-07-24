@@ -13,12 +13,12 @@ class UserDefaultsRepositorySpec: XCTestCase {
     override func setUp() {
         super.setUp()
     }
-    
+
     override func tearDown() {
         super.tearDown()
         UserDefaults.standard.removeObject(forKey: "token")
     }
-    
+
     func testRespositoryCanSaveToken() {
         let sut = locator.repository
         sut.saveAuthToken("0000")

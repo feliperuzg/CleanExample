@@ -1,5 +1,5 @@
 //
-//  LoginRepositorySpec.swift
+//  AuthenticationRepositorySpec.swift
 //  CleanExampleTests
 //
 //  Created by Felipe Ruz on 19-07-17.
@@ -8,14 +8,15 @@
 
 import XCTest
 @testable import CleanExample
-class LoginRepositorySpec: XCTestCase {
+class AuthenticationRepositorySpec: XCTestCase {
 
-    let locator = LoginServiceLocator()
-    func testLoginRepositoryCanSuccsessfullyLoginUser() {
+    let locator = AuthenticationServiceLocator()
+    func testAuthenticationRepositoryCanSuccsessfullyLoginUser() {
         let sut = locator.repository
         let exp = expectation(description: "testLoginRepositoryCanSuccsessfullyLoginUser")
-        sut.loginUser(withCredentials: "Juan", password: "1234", onSuccess: { (user, token) in
+        sut.executeLogin(withCredentials: "Juan", password: "1234", onSuccess: { (user, token) in
             XCTAssertNotNil(user)
+            XCTAssertNotNil(token)
             exp.fulfill()
         }) { (error) in
             XCTFail(error.localizedDescription)
@@ -24,11 +25,11 @@ class LoginRepositorySpec: XCTestCase {
         waitForExpectations(timeout: 3, handler: nil)
     }
 
-    func testLoginRepositoryCanShowFailureLoginUser() {
+    func testAuthenticationRepositoryCanShowFailureLoginUser() {
         let sut = locator.repository
         let exp = expectation(description: "testLoginRepositoryCanShowFailureLoginUser")
-        sut.loginUser(withCredentials: "", password: "1234", onSuccess: { (user, token) in
-            XCTFail()
+        sut.executeLogin(withCredentials: "", password: "1234", onSuccess: { (user, token) in
+            XCTFail("Neither Token \(token) or User: \(user.firstName) have use here")
             exp.fulfill()
         }) { (error) in
             XCTAssertNotNil(error)

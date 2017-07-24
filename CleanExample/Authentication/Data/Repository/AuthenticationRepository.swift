@@ -12,8 +12,8 @@ struct AuthenticationRepository<T: AuthenticationDataSource>: AuthenticationRepo
     let datasource: T
 
     func executeLogin(withCredentials userName: String, password: String,
-                   onSuccess: @escaping (User, String) -> Void,
-                   onError: @escaping (CustomError) -> Void) {
+                      onSuccess: @escaping (User, String) -> Void,
+                      onError: @escaping (CustomError) -> Void) {
         datasource.executeLogin(withCredentials: userName, password: password, onSuccess: { (entity, token) in
             onSuccess(NewUser(fromEntity: entity), token)
         }) { (error) in

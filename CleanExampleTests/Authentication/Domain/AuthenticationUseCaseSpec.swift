@@ -1,5 +1,5 @@
 //
-//  LoginUseCaseSpec.swift
+//  AuthenticationUseCaseSpec.swift
 //  CleanExampleTests
 //
 //  Created by Felipe Ruz on 19-07-17.
@@ -8,12 +8,12 @@
 
 import XCTest
 @testable import CleanExample
-class LoginUseCaseSpec: XCTestCase {
-    let locator = LoginServiceLocator()
+class AuthenticationUseCaseSpec: XCTestCase {
+    let locator = AuthenticationServiceLocator()
     func testLoginSuccessful() {
         let sut = locator.useCases
         let exp = expectation(description: "testLoginSuccessful")
-        sut.loginUser(withCredentials: "Juan", password: "1234", onSuccess: { (user) in
+        sut.executeLogin(withCredentials: "Juan", password: "1234", onSuccess: { (user) in
             XCTAssertNotNil(user)
             exp.fulfill()
         }) { (error) in
@@ -26,8 +26,8 @@ class LoginUseCaseSpec: XCTestCase {
     func testLoginFailure() {
         let sut = locator.useCases
         let exp = expectation(description: "testLoginFailure")
-        sut.loginUser(withCredentials: "", password: "1234", onSuccess: { (user) in
-            XCTFail()
+        sut.executeLogin(withCredentials: "", password: "1234", onSuccess: { (user) in
+            XCTFail("User \(user.firstName) should not be here")
             exp.fulfill()
         }) { (error) in
             XCTAssertNotNil(error)

@@ -11,8 +11,8 @@ struct AuthenticationUseCase {
     let storageRepository: StorageRepositoryProtocol
 
     func executeLogin(withCredentials userName: String, password: String,
-                   onSuccess: @escaping (User) -> Void,
-                   onError: @escaping (CustomError) -> Void) {
+                      onSuccess: @escaping (User) -> Void,
+                      onError: @escaping (CustomError) -> Void) {
         repository.executeLogin(withCredentials: userName, password: password, onSuccess: { (user, token) in
             self.storageRepository.saveAuthToken(token)
             onSuccess(user)

@@ -1,5 +1,5 @@
 //
-//  LoginMockDataSourceSpec.swift
+//  AuthenticationMockDataSourceSpec.swift
 //  CleanExampleTests
 //
 //  Created by Felipe Ruz on 19-07-17.
@@ -8,15 +8,16 @@
 
 import XCTest
 @testable import CleanExample
-class LoginMockDataSourceSpec: XCTestCase {
-    let locator = LoginServiceLocator()
-    
-    func testLoginDataSourceCanReturnEntity() {
+class AuthenticationMockDataSourceSpec: XCTestCase {
+    let locator = AuthenticationServiceLocator()
+
+    func testAuthenticationDataSourceCanReturnEntity() {
         let sut = locator.dataSource
         let exp = expectation(description: "testLoginDataSourceCanReturnEntity")
 
-        sut.loginUser(withCredentials: "Juan", password: "1234", onSuccess: { (entity, token) in
+        sut.executeLogin(withCredentials: "Juan", password: "1234", onSuccess: { (entity, token) in
             XCTAssertNotNil(entity)
+            XCTAssertNotNil(token)
             exp.fulfill()
         }) { (error) in
             XCTFail(error.localizedDescription)
@@ -26,11 +27,11 @@ class LoginMockDataSourceSpec: XCTestCase {
         waitForExpectations(timeout: 3, handler: nil)
     }
 
-    func testLoginDataSourceCanReturnError() {
+    func testAuthenticationDataSourceCanReturnError() {
         let sut = locator.dataSource
         let exp = expectation(description: "testLoginDataSourceCanReturnError")
-        sut.loginUser(withCredentials: "", password: "", onSuccess: { (entity, token) in
-            XCTFail()
+        sut.executeLogin(withCredentials: "", password: "", onSuccess: { (entity, token) in
+            XCTFail("Neither Token \(token) or UserEntity: \(entity.firstName) have use here")
             exp.fulfill()
         }) { (error) in
             XCTAssertNotNil(error)

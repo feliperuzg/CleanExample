@@ -6,7 +6,9 @@
 //  Copyright © 2017 Felipe Ruz. All rights reserved.
 //
 
-protocol AuthenticationDataSource {
+import Foundation
+
+protocol AuthenticationDataSource: NSObjectProtocol {
     // swiftlint:disable type_name
     associatedtype T
     // swiftlint:enable type_name

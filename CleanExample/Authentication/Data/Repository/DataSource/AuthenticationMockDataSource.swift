@@ -9,6 +9,9 @@
 import Foundation
 
 class AuthenticationMockDataSource: AuthenticationDataSource {
+
+    var description: String
+
     let restApi: AuthenticationRestApi
 
     init(restApi: AuthenticationRestApi) {

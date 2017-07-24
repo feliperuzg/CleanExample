@@ -44,6 +44,11 @@
 		A8CF94FB1F1FC0D300A4CBDA /* LoginPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF94FA1F1FC0D300A4CBDA /* LoginPresenterProtocol.swift */; };
 		A8CF94FD1F1FC0E900A4CBDA /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF94FC1F1FC0E900A4CBDA /* LoginViewProtocol.swift */; };
 		A8CF95001F1FF25000A4CBDA /* LoginPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF94FF1F1FF25000A4CBDA /* LoginPresenterSpec.swift */; };
+		A8D016411F269F15002E5B0D /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D016401F269F15002E5B0D /* HomeViewProtocol.swift */; };
+		A8D016431F269F23002E5B0D /* HomePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D016421F269F23002E5B0D /* HomePresenterProtocol.swift */; };
+		A8D016461F269F37002E5B0D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D016441F269F37002E5B0D /* HomeViewController.swift */; };
+		A8D016471F269F37002E5B0D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D016451F269F37002E5B0D /* HomeViewController.xib */; };
+		A8D016491F269F4D002E5B0D /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D016481F269F4D002E5B0D /* HomePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +112,11 @@
 		A8CF94FA1F1FC0D300A4CBDA /* LoginPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocol.swift; sourceTree = "<group>"; };
 		A8CF94FC1F1FC0E900A4CBDA /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
 		A8CF94FF1F1FF25000A4CBDA /* LoginPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterSpec.swift; sourceTree = "<group>"; };
+		A8D016401F269F15002E5B0D /* HomeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewProtocol.swift; sourceTree = "<group>"; };
+		A8D016421F269F23002E5B0D /* HomePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterProtocol.swift; sourceTree = "<group>"; };
+		A8D016441F269F37002E5B0D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A8D016451F269F37002E5B0D /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		A8D016481F269F4D002E5B0D /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +316,8 @@
 		A8ACFB021F1E96770065306D /* CleanExample */ = {
 			isa = PBXGroup;
 			children = (
+				A8D0164A1F26A507002E5B0D /* Contacts */,
+				A8D0163E1F2682F6002E5B0D /* Home */,
 				A860515C1F21326C0048C86E /* Storage */,
 				A8ACFB031F1E96770065306D /* AppDelegate.swift */,
 				A8ACFB0A1F1E96770065306D /* Assets.xcassets */,
@@ -447,6 +459,105 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A8D0163E1F2682F6002E5B0D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A8D0163F1F269EF4002E5B0D /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A8D0163F1F269EF4002E5B0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A8D016481F269F4D002E5B0D /* HomePresenter.swift */,
+				A8D016421F269F23002E5B0D /* HomePresenterProtocol.swift */,
+				A8D016441F269F37002E5B0D /* HomeViewController.swift */,
+				A8D016451F269F37002E5B0D /* HomeViewController.xib */,
+				A8D016401F269F15002E5B0D /* HomeViewProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A8D0164A1F26A507002E5B0D /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				A8D0164B1F26A520002E5B0D /* Data */,
+				A8D016501F26A567002E5B0D /* DI */,
+				A8D016511F26A56B002E5B0D /* Domain */,
+				A8D016521F26A577002E5B0D /* View */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		A8D0164B1F26A520002E5B0D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A8D0164C1F26A527002E5B0D /* Entity */,
+				A8D0164E1F26A542002E5B0D /* Network */,
+				A8D0164D1F26A537002E5B0D /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A8D0164C1F26A527002E5B0D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		A8D0164D1F26A537002E5B0D /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A8D0164F1F26A555002E5B0D /* DataSource */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A8D0164E1F26A542002E5B0D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A8D0164F1F26A555002E5B0D /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		A8D016501F26A567002E5B0D /* DI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		A8D016511F26A56B002E5B0D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A8D016531F26A585002E5B0D /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A8D016521F26A577002E5B0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A8D016531F26A585002E5B0D /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -555,6 +666,7 @@
 				A8C8A8E61F1EBAFE0038B3F2 /* login200.json in Resources */,
 				A8ACFB0B1F1E96770065306D /* Assets.xcassets in Resources */,
 				A8CF94F31F1FB78300A4CBDA /* LoginViewController.xib in Resources */,
+				A8D016471F269F37002E5B0D /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,9 +715,11 @@
 				A80C45CB1F1E98B3007F2EFA /* UserEntity.swift in Sources */,
 				A80C45CF1F1E99D8007F2EFA /* NewUser.swift in Sources */,
 				A8ACFB041F1E96770065306D /* AppDelegate.swift in Sources */,
+				A8D016411F269F15002E5B0D /* HomeViewProtocol.swift in Sources */,
 				A8C8A8E11F1EBA5B0038B3F2 /* AuthenticationRestApi.swift in Sources */,
 				A8C8A8E31F1EBACF0038B3F2 /* AuthenticationMockApi.swift in Sources */,
 				A8CF94FB1F1FC0D300A4CBDA /* LoginPresenterProtocol.swift in Sources */,
+				A8D016461F269F37002E5B0D /* HomeViewController.swift in Sources */,
 				A86051671F21334F0048C86E /* StorageDataSource.swift in Sources */,
 				A860516B1F21362B0048C86E /* StorageRepositoryProtocol.swift in Sources */,
 				A8C8A8EB1F1F97CC0038B3F2 /* CustomError.swift in Sources */,
@@ -614,9 +728,11 @@
 				A80C45CD1F1E99CC007F2EFA /* User.swift in Sources */,
 				A8CF94F51F1FB7C800A4CBDA /* LoginPresenter.swift in Sources */,
 				A8CF94FD1F1FC0E900A4CBDA /* LoginViewProtocol.swift in Sources */,
+				A8D016431F269F23002E5B0D /* HomePresenterProtocol.swift in Sources */,
 				A8C8A8F11F1F9B0D0038B3F2 /* AuthenticationRepositoryProtocol.swift in Sources */,
 				A8A7229E1F1FAE3700DF908D /* AuthenticationServiceLocator.swift in Sources */,
 				A8C8A8DD1F1EB8310038B3F2 /* AuthenticationUseCase.swift in Sources */,
+				A8D016491F269F4D002E5B0D /* HomePresenter.swift in Sources */,
 				A8C8A8F41F1F9B920038B3F2 /* AuthenticationDataSource.swift in Sources */,
 				A8C8A8DF1F1EB9330038B3F2 /* AuthenticationRepository.swift in Sources */,
 			);

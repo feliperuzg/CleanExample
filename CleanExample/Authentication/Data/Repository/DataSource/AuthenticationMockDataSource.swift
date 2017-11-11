@@ -10,9 +10,7 @@ import Foundation
 
 class AuthenticationMockDataSource: AuthenticationDataSource {
 
-    var description: String
-
-    let restApi: AuthenticationRestApi
+    var restApi: AuthenticationRestApi
 
     init(restApi: AuthenticationRestApi) {
         self.restApi = restApi
@@ -23,8 +21,8 @@ class AuthenticationMockDataSource: AuthenticationDataSource {
                       onError: @escaping (CustomError) -> Void) {
         restApi.executeLogin(withCredentials: userName, password: password, onSuccess: { (entity, token) in
             onSuccess(entity, token)
-        }) { (error) in
+        }, onError: { error in
             onError(error)
-        }
+        })
     }
 }

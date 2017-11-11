@@ -16,10 +16,10 @@ class AuthenticationUseCaseSpec: XCTestCase {
         sut.executeLogin(withCredentials: "Juan", password: "1234", onSuccess: { (user) in
             XCTAssertNotNil(user)
             exp.fulfill()
-        }) { (error) in
+        }, onError: { (error) in
             XCTFail(error.localizedDescription)
             exp.fulfill()
-        }
+        })
         waitForExpectations(timeout: 3, handler: nil)
     }
 
@@ -29,11 +29,11 @@ class AuthenticationUseCaseSpec: XCTestCase {
         sut.executeLogin(withCredentials: "", password: "1234", onSuccess: { (user) in
             XCTFail("User \(user.firstName) should not be here")
             exp.fulfill()
-        }) { (error) in
+        }, onError: { (error) in
             XCTAssertNotNil(error)
             XCTAssertEqual(error.code, 400)
             exp.fulfill()
-        }
+        })
         waitForExpectations(timeout: 3, handler: nil)
     }
 }

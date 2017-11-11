@@ -18,10 +18,10 @@ class AuthenticationRepositorySpec: XCTestCase {
             XCTAssertNotNil(user)
             XCTAssertNotNil(token)
             exp.fulfill()
-        }) { (error) in
+        }, onError: { (error) in
             XCTFail(error.localizedDescription)
             exp.fulfill()
-        }
+        })
         waitForExpectations(timeout: 3, handler: nil)
     }
 
@@ -31,11 +31,11 @@ class AuthenticationRepositorySpec: XCTestCase {
         sut.executeLogin(withCredentials: "", password: "1234", onSuccess: { (user, token) in
             XCTFail("Neither Token \(token) or User: \(user.firstName) have use here")
             exp.fulfill()
-        }) { (error) in
+        }, onError: { (error) in
             XCTAssertNotNil(error)
             XCTAssertEqual(error.code, 400)
             exp.fulfill()
-        }
+        })
         waitForExpectations(timeout: 3, handler: nil)
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AuthenticationDataSource: NSObjectProtocol {
+protocol AuthenticationDataSource: class {
     // swiftlint:disable type_name
     associatedtype T
     // swiftlint:enable type_name

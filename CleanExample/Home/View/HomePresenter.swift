@@ -20,8 +20,9 @@ class HomePresenter: HomePresenterProtocol {
         self.homeView = homeView
     }
 
-    func getContacts(onSuccess: @escaping ([Any]) -> Void,
-                     onError: @escaping (CustomError) -> Void) {
-        
+    func getContacts(
+        onSuccess: @escaping ([Any]) -> Void,
+        onError: @escaping (CustomError) -> Void
+        ) {
     }
 }

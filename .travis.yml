@@ -1,4 +1,4 @@
 language: objective-c
 osx_image: xcode9.1
 script:
-- ./fastlane/run.sh
+- ./run.sh

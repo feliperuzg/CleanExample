@@ -19,10 +19,10 @@ class AuthenticationMockDataSourceSpec: XCTestCase {
             XCTAssertNotNil(entity)
             XCTAssertNotNil(token)
             exp.fulfill()
-        }) { (error) in
+        }, onError: { (error) in
             XCTFail(error.localizedDescription)
             exp.fulfill()
-        }
+        })
 
         waitForExpectations(timeout: 3, handler: nil)
     }
@@ -33,10 +33,10 @@ class AuthenticationMockDataSourceSpec: XCTestCase {
         sut.executeLogin(withCredentials: "", password: "", onSuccess: { (entity, token) in
             XCTFail("Neither Token \(token) or UserEntity: \(entity.firstName) have use here")
             exp.fulfill()
-        }) { (error) in
+        }, onError: { (error) in
             XCTAssertNotNil(error)
             exp.fulfill()
-        }
+        })
         waitForExpectations(timeout: 3, handler: nil)
     }
 }

@@ -25,9 +25,9 @@ class LoginPresenter: LoginPresenterProtocol {
         loginService.executeLogin(withCredentials: user, password: pass, onSuccess: { [weak self] user in
             self?.loginView?.hideActivityIndicator()
             print(user.firstName)
-        }) { [weak self] error in
+        }, onError: { [weak self] error in
             self?.loginView?.hideActivityIndicator()
             self?.loginView?.showErrorMessage(error)
-        }
+        })
     }
 }

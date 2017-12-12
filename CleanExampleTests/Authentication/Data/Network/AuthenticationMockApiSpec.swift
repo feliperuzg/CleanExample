@@ -28,10 +28,10 @@ class AuthenticationMockApiSpec: XCTestCase {
             XCTAssertEqual(entity.firstName, "Juan")
             XCTAssertEqual(token, "asdfghjkl1234567890")
             exp.fulfill()
-        }) { (error) in
+        }, onError: { (error) in
             XCTFail(error.localizedDescription)
             exp.fulfill()
-        }
+        })
         waitForExpectations(timeout: 3, handler: nil)
     }
 
@@ -40,11 +40,11 @@ class AuthenticationMockApiSpec: XCTestCase {
         sut.executeLogin(withCredentials: "", password: "pass", onSuccess: { (entity, token) in
             XCTFail("Neither Token \(token) or UserEntity: \(entity.firstName) have use here")
             exp.fulfill()
-        }) { (error) in
+        }, onError: { (error) in
             XCTAssertNotNil(error)
             XCTAssertEqual(error.localizedDescription, "BAD REQUEST")
             exp.fulfill()
-        }
+        })
         waitForExpectations(timeout: 3, handler: nil)
     }
 }

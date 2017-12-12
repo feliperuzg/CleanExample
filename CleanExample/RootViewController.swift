@@ -23,4 +23,8 @@ class RootViewController: UINavigationController {
         addChildViewController(loginView)
         view.addSubview(loginView.view)
     }
+
+    func displayMainView() {
+
+    }
 }

@@ -16,8 +16,8 @@ struct AuthenticationUseCase {
         repository.executeLogin(withCredentials: userName, password: password, onSuccess: { (user, token) in
             self.storageRepository.saveAuthToken(token)
             onSuccess(user)
-        }) { (error) in
+        }, onError: { (error) in
             onError(error)
-        }
+        })
     }
 }

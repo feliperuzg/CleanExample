@@ -16,8 +16,8 @@ struct AuthenticationRepository<T: AuthenticationDataSource>: AuthenticationRepo
                       onError: @escaping (CustomError) -> Void) {
         datasource.executeLogin(withCredentials: userName, password: password, onSuccess: { (entity, token) in
             onSuccess(NewUser(fromEntity: entity), token)
-        }) { (error) in
+        }, onError: { (error) in
             onError(error)
-        }
+        })
     }
 }

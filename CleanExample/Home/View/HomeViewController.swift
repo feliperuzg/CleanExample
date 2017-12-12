@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: HomeViewProtocol {
-    func displayUserInformation(user: User) {
-        //TODO: Displays user header
+    func displayUserInformation(user _: String) {
+        // TODO: Displays user header
     }
 }

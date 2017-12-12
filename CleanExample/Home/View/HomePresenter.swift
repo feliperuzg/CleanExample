@@ -10,7 +10,7 @@ import Foundation
 
 class HomePresenter: HomePresenterProtocol {
     fileprivate let homeService: NSObject
-    weak fileprivate var homeView: HomeViewProtocol?
+    fileprivate weak var homeView: HomeViewProtocol?
 
     init(_ homeService: NSObject) {
         self.homeService = homeService
@@ -21,8 +21,8 @@ class HomePresenter: HomePresenterProtocol {
     }
 
     func getContacts(
-        onSuccess: @escaping ([Any]) -> Void,
-        onError: @escaping (CustomError) -> Void
-        ) {
+        onSuccess _: @escaping ([Any]) -> Void,
+        onError _: @escaping (CustomError) -> Void
+    ) {
     }
 }

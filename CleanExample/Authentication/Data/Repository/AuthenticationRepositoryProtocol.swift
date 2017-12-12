@@ -7,7 +7,5 @@
 //
 
 protocol AuthenticationRepositoryProtocol {
-    func executeLogin(withCredentials userName: String, password: String,
-                      onSuccess: @escaping (User, String) -> Void,
-                      onError: @escaping (CustomError) -> Void)
+    func executeLogin(with credentials: LoginModel, completionHandler: @escaping (TokenModel?, CustomError?) -> Void)
 }

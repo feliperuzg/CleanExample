@@ -12,6 +12,8 @@ protocol ContactsDataSourceProtocol {
     // swiftlint:disable type_name
     associatedtype T
     // swiftlint:enable type_name
-    func getContacts(onSuccess: @escaping ([T]) -> Void,
-                     onError: @escaping (CustomError) -> Void)
+    func getContacts(
+        onSuccess: @escaping ([T]) -> Void,
+        onError: @escaping (CustomError) -> Void
+    )
 }

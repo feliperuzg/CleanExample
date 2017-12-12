@@ -9,23 +9,23 @@
 import Foundation
 
 class AuthenticationMockApi: AuthenticationRestApi {
-    let response = ["firstName": "Juan",
-                    "lastName": "Perez",
-                    "age": 20,
-                    "phone": "12345678",
-                    "email": "example@domain.com",
-                    "address": "Any Street #123"] as [String : Any]
-    let error = CustomError(localizedTitle: "BAD REQUEST", localizedDescription: "BAD REQUEST", code: 400)
-    let token = "asdfghjkl1234567890"
 
-    func executeLogin(withCredentials userName: String, password: String,
-                      onSuccess: @escaping (UserEntity, String) -> Void,
-                      onError: @escaping (CustomError) -> Void) {
+    let networkConfiguration: NetworkConfiguration
+
+    init(networkConfiguration: NetworkConfiguration) {
+        self.networkConfiguration = networkConfiguration
+    }
+
+    func executeLogin(
+        with credentials: LoginEntity,
+        completionHandler: @escaping (TokenEntity?, CustomError?) -> Void
+    ) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            if userName.isEmpty || password.isEmpty {
-                onError(self.error)
+            if credentials.userName.isEmpty || credentials.password.isEmpty {
+                completionHandler(nil, CustomError(localizedTitle: "", localizedDescription: "", code: 400))
             } else {
-                onSuccess(UserEntity(fromDictionary: self.response), self.token)
+                let entity: TokenEntity = TokenEntity(token: "1234567890")
+                completionHandler(entity, nil)
             }
         }
     }

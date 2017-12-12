@@ -1,0 +1,30 @@
+PODS:
+  - Alamofire (4.5.1)
+  - Mockingjay (2.0.0):
+    - Mockingjay/Core (= 2.0.0)
+  - Mockingjay/Core (2.0.0):
+    - URITemplate (~> 2.0)
+  - URITemplate (2.0.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - Mockingjay (from `https://github.com/feliperuzg/Mockingjay.git`, branch `noXCTests`)
+
+EXTERNAL SOURCES:
+  Mockingjay:
+    :branch: noXCTests
+    :git: https://github.com/feliperuzg/Mockingjay.git
+
+CHECKOUT OPTIONS:
+  Mockingjay:
+    :commit: 3956c7aadb03aab529319cfa1e8c6e2a1d9f8acd
+    :git: https://github.com/feliperuzg/Mockingjay.git
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Mockingjay: fad6f2a63a68a075d884fbd8bebc6e97afd40289
+  URITemplate: ace0c4c46dcf8afe6e89b4060621852886b15c3b
+
+PODFILE CHECKSUM: 75bf111be4e952c1a6a1e5207b4e29a2a5e37194
+
+COCOAPODS: 1.3.1

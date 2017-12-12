@@ -25,6 +25,5 @@ class RootViewController: UINavigationController {
     }
 
     func displayMainView() {
-
     }
 }

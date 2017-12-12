@@ -16,13 +16,12 @@ class AuthenticationMockDataSource: AuthenticationDataSource {
         self.restApi = restApi
     }
 
-    func executeLogin(withCredentials userName: String, password: String,
-                      onSuccess: @escaping (UserEntity, String) -> Void,
-                      onError: @escaping (CustomError) -> Void) {
-        restApi.executeLogin(withCredentials: userName, password: password, onSuccess: { (entity, token) in
-            onSuccess(entity, token)
-        }, onError: { error in
-            onError(error)
-        })
+    func executeLogin(
+        with credentials: LoginEntity,
+        completionHandler: @escaping (TokenEntity?, CustomError?) -> Void
+    ) {
+        restApi.executeLogin(with: credentials) { user, error in
+            completionHandler(user, error)
+        }
     }
 }

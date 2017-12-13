@@ -23,12 +23,12 @@ class LoginPresenter: LoginPresenterProtocol {
     func doLogin(_ user: String, password pass: String) {
         loginView?.showActivityIndicator()
         let model = LoginModel(userName: user, password: pass)
-        loginService.executeLogin(withm: model) { token, error in
+        loginService.executeLogin(withm: model) { error in
             self.loginView?.hideActivityIndicator()
-            if let token = token {
-                print(token.address)
+            if let error = error {
+                self.loginView?.showErrorMessage(error)
             } else {
-                self.loginView?.showErrorMessage(error!)
+                // TODO: Show Home
             }
         }
     }

@@ -17,6 +17,6 @@ enum Endpoint {
     }
 
     enum Authentication: String {
-        case login
+        case login = "authorize"
     }
 }

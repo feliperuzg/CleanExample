@@ -15,9 +15,7 @@ class UserDefaultsStorageDataSource: StorageDataSource {
         storage.set(token, forKey: "token")
     }
 
-    func getAuthToken(_ onSuccess: @escaping (String) -> Void) {
-        // swiftlint:disable force_cast
-        let token = storage.value(forKey: "token") as! String
-        onSuccess(token)
+    func authToken() -> String {
+        return storage.string(forKey: "token") ?? ""
     }
 }

@@ -9,7 +9,7 @@
 enum NetworkConstants {
     static let networkConfigurationList = "NetworkConfiguration"
     static let fileExtension = "plist"
-    static let baseURL = ""
-    static let version = ""
-    static let endpointKey = ""
+    static let baseURL = "BaseURL"
+    static let version = "Version"
+    static let endpointKey = "Endpoint"
 }

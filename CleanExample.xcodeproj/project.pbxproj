@@ -12,6 +12,13 @@
 		8F36055C7DC63C4B5261A931 /* Pods_CleanExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE4331A80A815D81138BAFA /* Pods_CleanExampleUITests.framework */; };
 		A80C45CB1F1E98B3007F2EFA /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80C45CA1F1E98B3007F2EFA /* UserEntity.swift */; };
 		A80C45CD1F1E99CC007F2EFA /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80C45CC1F1E99CC007F2EFA /* UserModel.swift */; };
+		A832E9EF1FE15ABF00EB29FD /* StubServiceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832E9EE1FE15ABF00EB29FD /* StubServiceBase.swift */; };
+		A832E9F11FE15AF200EB29FD /* StubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832E9F01FE15AF200EB29FD /* StubService.swift */; };
+		A832E9F61FE15C2000EB29FD /* StubAthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832E9F51FE15C2000EB29FD /* StubAthenticationService.swift */; };
+		A832E9F81FE15CED00EB29FD /* stubAuthorize().json in Resources */ = {isa = PBXBuildFile; fileRef = A832E9F71FE15CED00EB29FD /* stubAuthorize().json */; };
+		A832E9FA1FE1652E00EB29FD /* AlamofireSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832E9F91FE1652E00EB29FD /* AlamofireSession.swift */; };
+		A832E9FC1FE165AA00EB29FD /* AlamofireHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832E9FB1FE165AA00EB29FD /* AlamofireHeaders.swift */; };
+		A832E9FE1FE1669C00EB29FD /* StorageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832E9FD1FE1669C00EB29FD /* StorageConstants.swift */; };
 		A860515B1F21039E0048C86E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A860515A1F21039E0048C86E /* RootViewController.swift */; };
 		A86051671F21334F0048C86E /* StorageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86051661F21334F0048C86E /* StorageDataSource.swift */; };
 		A86051691F2134460048C86E /* UserDefaultsStorageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86051681F2134460048C86E /* UserDefaultsStorageDataSource.swift */; };
@@ -91,6 +98,13 @@
 		9296E66927F7B1CFA0C7529B /* Pods-CleanExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanExample/Pods-CleanExample.release.xcconfig"; sourceTree = "<group>"; };
 		A80C45CA1F1E98B3007F2EFA /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		A80C45CC1F1E99CC007F2EFA /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		A832E9EE1FE15ABF00EB29FD /* StubServiceBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubServiceBase.swift; sourceTree = "<group>"; };
+		A832E9F01FE15AF200EB29FD /* StubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubService.swift; sourceTree = "<group>"; };
+		A832E9F51FE15C2000EB29FD /* StubAthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubAthenticationService.swift; sourceTree = "<group>"; };
+		A832E9F71FE15CED00EB29FD /* stubAuthorize().json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "stubAuthorize().json"; sourceTree = "<group>"; };
+		A832E9F91FE1652E00EB29FD /* AlamofireSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireSession.swift; sourceTree = "<group>"; };
+		A832E9FB1FE165AA00EB29FD /* AlamofireHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireHeaders.swift; sourceTree = "<group>"; };
+		A832E9FD1FE1669C00EB29FD /* StorageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageConstants.swift; sourceTree = "<group>"; };
 		A860515A1F21039E0048C86E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		A86051661F21334F0048C86E /* StorageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageDataSource.swift; sourceTree = "<group>"; };
 		A86051681F2134460048C86E /* UserDefaultsStorageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorageDataSource.swift; sourceTree = "<group>"; };
@@ -196,11 +210,67 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A832E9EB1FE15A6700EB29FD /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				A8C8A8EA1F1F97CC0038B3F2 /* CustomError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		A832E9EC1FE15A7600EB29FD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A8C4BAC31FE0298200928C58 /* CodableHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A832E9ED1FE15AAD00EB29FD /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				A832E9F31FE15B7500EB29FD /* Authentication */,
+				A832E9F01FE15AF200EB29FD /* StubService.swift */,
+				A832E9EE1FE15ABF00EB29FD /* StubServiceBase.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		A832E9F21FE15B6900EB29FD /* NetworkConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				A8C4BAD51FE0600F00928C58 /* Domain.swift */,
+				A8C4BAD31FE05FF700928C58 /* Endpoint.swift */,
+				A8C4BACF1FE05E5D00928C58 /* NetworkConfiguration.swift */,
+				A8C4BAD71FE0601F00928C58 /* NetworkConstants.swift */,
+				A8C4BAD91FE075F800928C58 /* NetworkConfiguration.plist */,
+			);
+			path = NetworkConfiguration;
+			sourceTree = "<group>";
+		};
+		A832E9F31FE15B7500EB29FD /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				A832E9F41FE15B8600EB29FD /* JSON */,
+				A832E9F51FE15C2000EB29FD /* StubAthenticationService.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		A832E9F41FE15B8600EB29FD /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				A832E9F71FE15CED00EB29FD /* stubAuthorize().json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		A860515C1F21326C0048C86E /* Storage */ = {
 			isa = PBXGroup;
 			children = (
 				A860515D1F2132860048C86E /* Data */,
 				A860515E1F2132920048C86E /* DI */,
+				A832E9FD1FE1669C00EB29FD /* StorageConstants.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -284,15 +354,6 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
-		A88905AC1F1FA7CE00298185 /* Global Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				A8C8A8EA1F1F97CC0038B3F2 /* CustomError.swift */,
-				A8C4BAC31FE0298200928C58 /* CodableHelper.swift */,
-			);
-			path = "Global Helpers";
-			sourceTree = "<group>";
-		};
 		A8A722931F1FA9EF00DF908D /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,16 +432,14 @@
 		A8ACFB021F1E96770065306D /* CleanExample */ = {
 			isa = PBXGroup;
 			children = (
-				A8C4BAD11FE05FE500928C58 /* Core */,
-				A8D0164A1F26A507002E5B0D /* Contacts */,
-				A8D0163E1F2682F6002E5B0D /* Home */,
-				A860515C1F21326C0048C86E /* Storage */,
 				A8ACFB031F1E96770065306D /* AppDelegate.swift */,
 				A8ACFB0A1F1E96770065306D /* Assets.xcassets */,
 				A88905AB1F1FA79F00298185 /* Authentication */,
-				A88905AC1F1FA7CE00298185 /* Global Helpers */,
+				A8D0164A1F26A507002E5B0D /* Contacts */,
+				A8C4BAD11FE05FE500928C58 /* Core */,
+				A8D0163E1F2682F6002E5B0D /* Home */,
 				A8ACFB0F1F1E96770065306D /* Info.plist */,
-				A860515A1F21039E0048C86E /* RootViewController.swift */,
+				A860515C1F21326C0048C86E /* Storage */,
 			);
 			path = CleanExample;
 			sourceTree = "<group>";
@@ -409,6 +468,9 @@
 		A8C4BAD11FE05FE500928C58 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A860515A1F21039E0048C86E /* RootViewController.swift */,
+				A832E9EC1FE15A7600EB29FD /* Helpers */,
+				A832E9EB1FE15A6700EB29FD /* Error */,
 				A8C4BAD21FE05FE800928C58 /* Network */,
 			);
 			path = Core;
@@ -417,11 +479,10 @@
 		A8C4BAD21FE05FE800928C58 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				A8C4BAD51FE0600F00928C58 /* Domain.swift */,
-				A8C4BAD31FE05FF700928C58 /* Endpoint.swift */,
-				A8C4BACF1FE05E5D00928C58 /* NetworkConfiguration.swift */,
-				A8C4BAD71FE0601F00928C58 /* NetworkConstants.swift */,
-				A8C4BAD91FE075F800928C58 /* NetworkConfiguration.plist */,
+				A832E9F21FE15B6900EB29FD /* NetworkConfiguration */,
+				A832E9ED1FE15AAD00EB29FD /* Stubs */,
+				A832E9F91FE1652E00EB29FD /* AlamofireSession.swift */,
+				A832E9FB1FE165AA00EB29FD /* AlamofireHeaders.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -767,6 +828,7 @@
 			files = (
 				A8C8A8E61F1EBAFE0038B3F2 /* login200.json in Resources */,
 				A8C4BADA1FE075F800928C58 /* NetworkConfiguration.plist in Resources */,
+				A832E9F81FE15CED00EB29FD /* stubAuthorize().json in Resources */,
 				A8ACFB0B1F1E96770065306D /* Assets.xcassets in Resources */,
 				A8CF94F31F1FB78300A4CBDA /* LoginViewController.xib in Resources */,
 				A8D016471F269F37002E5B0D /* HomeViewController.xib in Resources */,
@@ -1000,13 +1062,16 @@
 				A8ACFB041F1E96770065306D /* AppDelegate.swift in Sources */,
 				A8C4BAD01FE05E5D00928C58 /* NetworkConfiguration.swift in Sources */,
 				A8D016411F269F15002E5B0D /* HomeViewProtocol.swift in Sources */,
+				A832E9FA1FE1652E00EB29FD /* AlamofireSession.swift in Sources */,
 				A8C8A8E11F1EBA5B0038B3F2 /* AuthenticationRestApi.swift in Sources */,
 				A8C8A8E31F1EBACF0038B3F2 /* AuthenticationMockApi.swift in Sources */,
 				A8CF94FB1F1FC0D300A4CBDA /* LoginPresenterProtocol.swift in Sources */,
 				A8C4BACC1FE05D3600928C58 /* TokenEntity.swift in Sources */,
+				A832E9FE1FE1669C00EB29FD /* StorageConstants.swift in Sources */,
 				A8D016461F269F37002E5B0D /* HomeViewController.swift in Sources */,
 				A8C4BAD41FE05FF700928C58 /* Endpoint.swift in Sources */,
 				A86051671F21334F0048C86E /* StorageDataSource.swift in Sources */,
+				A832E9EF1FE15ABF00EB29FD /* StubServiceBase.swift in Sources */,
 				A860516B1F21362B0048C86E /* StorageRepositoryProtocol.swift in Sources */,
 				A8C4BACA1FE057CC00928C58 /* LoginModel.swift in Sources */,
 				A8C8A8EB1F1F97CC0038B3F2 /* CustomError.swift in Sources */,
@@ -1024,9 +1089,12 @@
 				A8C8A8DD1F1EB8310038B3F2 /* AuthenticationUseCase.swift in Sources */,
 				A8D016551F26A661002E5B0D /* ContactsRepositoryProtocol.swift in Sources */,
 				A8D016491F269F4D002E5B0D /* HomePresenter.swift in Sources */,
+				A832E9F61FE15C2000EB29FD /* StubAthenticationService.swift in Sources */,
+				A832E9FC1FE165AA00EB29FD /* AlamofireHeaders.swift in Sources */,
 				A8C8A8F41F1F9B920038B3F2 /* AuthenticationDataSource.swift in Sources */,
 				A8C8A8DF1F1EB9330038B3F2 /* AuthenticationRepository.swift in Sources */,
 				A8C4BAD61FE0600F00928C58 /* Domain.swift in Sources */,
+				A832E9F11FE15AF200EB29FD /* StubService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1184,6 +1252,7 @@
 			baseConfigurationReference = 1C36B991AC8A90254FA12EB2 /* Pods-CleanExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 2D3TXVT8E8;
 				INFOPLIST_FILE = CleanExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1199,6 +1268,7 @@
 			baseConfigurationReference = 9296E66927F7B1CFA0C7529B /* Pods-CleanExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 2D3TXVT8E8;
 				INFOPLIST_FILE = CleanExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

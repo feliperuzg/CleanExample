@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class AuthenticationMockApi: AuthenticationRestApi {
 
@@ -20,12 +21,20 @@ class AuthenticationMockApi: AuthenticationRestApi {
         with credentials: LoginEntity,
         completionHandler: @escaping (TokenEntity?, CustomError?) -> Void
     ) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            if credentials.userName.isEmpty || credentials.password.isEmpty {
-                completionHandler(nil, CustomError(localizedTitle: "", localizedDescription: "", code: 400))
+        let url = networkConfiguration.authenticationURL(for: .login)
+        let params: Parameters = [
+            "userName": credentials.userName,
+            "password": credentials.password
+        ]
+        AlamofireSession.execute(url, .post, params) { response in
+            if
+                let data = response.data,
+                let token: TokenEntity = try? CodableHelper().decodeNetworkObject(object: data),
+                !credentials.userName.isEmpty,
+                !credentials.password.isEmpty {
+                completionHandler(token, nil)
             } else {
-                let entity: TokenEntity = TokenEntity(token: "1234567890")
-                completionHandler(entity, nil)
+                completionHandler(nil, CustomError(localizedTitle: "", localizedDescription: "", code: 400))
             }
         }
     }

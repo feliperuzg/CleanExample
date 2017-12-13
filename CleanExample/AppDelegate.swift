@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _: UIApplication,
         didFinishLaunchingWithOptions _: [UIApplicationLaunchOptionsKey: Any]?
     ) -> Bool {
+        StubService.stubAll()
         let rootViewController = RootViewController()
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = rootViewController

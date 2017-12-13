@@ -27,6 +27,11 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
     @IBAction func onLoginButtonTap(_: Any) {
         loginPresenter?.doLogin(userName.text!, password: userPassword.text!)
     }

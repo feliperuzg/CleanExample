@@ -19,9 +19,7 @@ class RootViewController: UINavigationController {
     func showLogin() {
         let presenter = LoginPresenter(authenticationLocator.useCases)
         loginView = LoginViewController(presenter)
-        loginView.view.frame = UIScreen.main.bounds
-        addChildViewController(loginView)
-        view.addSubview(loginView.view)
+        pushViewController(loginView, animated: true)
     }
 
     func displayMainView() {

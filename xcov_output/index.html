@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<!--
+xcov - Xcode code coverage without hassle
+A tool developed by Carlos Vidal @carlostify
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>xcov - Code coverage report</title>
+  <link rel="stylesheet" media="screen" href="resources/bootstrap.min.css" />
+  <link rel="stylesheet" media="screen" href="resources/opensans.css" />
+  <link rel="stylesheet" media="all" href="resources/main.css" />
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script src="resources/jquery.min.js"></script>
+  <script src="resources/bootstrap.min.js"></script>
+  <script src="resources/main.js"></script>
+</head>
+<body>
+  <!-- NavBar template starts here -->
+  <nav class="navbar navbar-fixed-top navbar-inverse" style=" border-bottom-width: 0px;">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8 text-left">
+          <img class="logo" src="resources/xcov_logo.png"/>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- NavBar template ends here -->
+  <!-- Body template starts here -->
+  <div class="container-fluid container-body">
+    <!-- Coverage resume starts here -->
+    <div class="row coverage-summary">
+        <div class="col-md-12 text-center">
+          <div class="summary-counter">
+            95.53%
+          </div>
+          <div class="summary-description" style="color: #1FCB32;">
+            Overall coverage is good
+          </div>
+        </div>
+    </div>
+    <!-- Coverage resume ends here -->
+        <!-- Target details start here -->
+    <div class="row target-details" target-id="e8466198c4ead2366ea4d091ce1e7c69073aec53">
+      <!-- Target name -->
+      <div class="col-xs-9 col-md-offset-1 col-md-8 col-lg-offset-2 col-lg-6 target-name">
+        CleanExample
+      </div>
+      <div class="col-xs-3 col-md-2 col-lg-2 text-right target-percentage">
+        95.53% <span><div class="circle" style="background-color: #1FCB32;"></div></span>
+      </div>
+    </div>
+    <!-- Target files -->
+    <div class="files-wrapper" id="e8466198c4ead2366ea4d091ce1e7c69073aec53" style="display: none;">
+    <div class="row target-files">
+      <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+                <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="803caf3f5f0e0a75fc6722f013b946cba117f431">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            StubServiceBase.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            66.67% <span><div class="circle-sm" style="background-color: #FCFF00;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="803caf3f5f0e0a75fc6722f013b946cba117f431" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.StubServiceBase.readJSON(fileName: Swift.String) -&gt; Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            60.00% <span><div class="circle-sm" style="background-color: #FF9C00;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.StubServiceBase.readJSONData(fileName: Swift.String) -&gt; Foundation.Data
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            60.00% <span><div class="circle-sm" style="background-color: #FF9C00;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.StubServiceBase.addStub(url: Swift.String, fileName: Swift.String, method: Mockingjay.HTTPMethod) -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="9184edfb932fa2107a8b1bf8785552028c485d02">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            CodableHelper.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            71.43% <span><div class="circle-sm" style="background-color: #FCFF00;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="9184edfb932fa2107a8b1bf8785552028c485d02" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.CodableHelper.decodeObjectFrom&lt;A, B where A: Swift.Encodable, B: Swift.Decodable&gt;(object: A) -&gt; Swift.Optional&lt;B&gt;
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            71.43% <span><div class="circle-sm" style="background-color: #FCFF00;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.CodableHelper.decodeNetworkObject&lt;A where A: Swift.Decodable&gt;(object: Foundation.Data) -&gt; Swift.Optional&lt;A&gt;
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            71.43% <span><div class="circle-sm" style="background-color: #FCFF00;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="6a9b34c4eb0e8c0c8c832aa57746c77b0e65c74c">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            NetworkConfiguration.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            94.87% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="6a9b34c4eb0e8c0c8c832aa57746c77b0e65c74c" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.NetworkConfiguration.__allocating_init() -&gt; CleanExample.NetworkConfiguration
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.NetworkConfiguration.prepare() -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.NetworkConfiguration.(prepareConfigurationDictionary in _377B414DEFBF7BB2AD7C62A5028BFE13)() -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            94.74% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.NetworkConfiguration.(endpointFor in _377B414DEFBF7BB2AD7C62A5028BFE13)(domain: CleanExample.Domain, endpoint: Swift.String) -&gt; Swift.String
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            90.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.NetworkConfiguration.authenticationURL(for: CleanExample.Endpoint.Authentication) -&gt; Swift.String
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="73da0b7a8dd78914353b8ebd2531715978b4f20f">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            StorageServiceLocator.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="73da0b7a8dd78914353b8ebd2531715978b4f20f" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.StorageServiceLocator.dataSource.getter : CleanExample.StorageDataSource
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.StorageServiceLocator.repository.getter : CleanExample.StorageRepositoryProtocol
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="694370a567265267221eb01cfd919949e38e1bf7">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            AppDelegate.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="694370a567265267221eb01cfd919949e38e1bf7" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.AppDelegate.application(__ObjC.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="4dab30f40693668651249f1ee5455e39aae8a1d2">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            AlamofireSession.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="4dab30f40693668651249f1ee5455e39aae8a1d2" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            static CleanExample.AlamofireSession.execute(Swift.String, Swift.Optional&lt;Alamofire.HTTPMethod&gt;, Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, Swift.Optional&lt;Swift.Bool&gt;, headers: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;, onCompletion: (Alamofire.DefaultDataResponse) -&gt; ()) -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="beb09e8f864970191b8c24ecf39e2895cfd460a7">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            AuthenticationMockApi.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="beb09e8f864970191b8c24ecf39e2895cfd460a7" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.AuthenticationMockApi.__allocating_init(networkConfiguration: CleanExample.NetworkConfiguration) -&gt; CleanExample.AuthenticationMockApi
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.AuthenticationMockApi.executeLogin(with: CleanExample.LoginEntity, completionHandler: (Swift.Optional&lt;CleanExample.TokenEntity&gt;, Swift.Optional&lt;CleanExample.CustomError&gt;) -&gt; ()) -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="50b6a02ed1af3713c7272d1ca802589929ff4f33">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            HomeViewController.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="50b6a02ed1af3713c7272d1ca802589929ff4f33" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.HomeViewController.__allocating_init(CleanExample.HomePresenterProtocol) -&gt; CleanExample.HomeViewController
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.HomeViewController.viewDidLoad() -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.HomeViewController.viewWillAppear(Swift.Bool) -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.HomeViewController.displayUserInformation(user: Swift.String) -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="463789e3837922c82b79fc35b49b5cb894bd04c8">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            CustomError.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="463789e3837922c82b79fc35b49b5cb894bd04c8" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.CustomError.init(localizedTitle: Swift.Optional&lt;Swift.String&gt;, localizedDescription: Swift.Optional&lt;Swift.String&gt;, code: Swift.Optional&lt;Swift.Int&gt;) -&gt; CleanExample.CustomError
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="b0cb44cb90e3228ec5c8f4c9e16337b33d3cc578">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            UserDefaultsRepository.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="b0cb44cb90e3228ec5c8f4c9e16337b33d3cc578" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.UserDefaultsRepository.init(datasource: CleanExample.StorageDataSource) -&gt; CleanExample.UserDefaultsRepository
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.UserDefaultsRepository.saveAuthToken(Swift.String) -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.UserDefaultsRepository.authToken() -&gt; Swift.String
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="a9dddd563304ae4c380ea353799922fd86557093">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            UserDefaultsStorageDataSource.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="a9dddd563304ae4c380ea353799922fd86557093" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.UserDefaultsStorageDataSource.saveAuthToken(Swift.String) -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.UserDefaultsStorageDataSource.authToken() -&gt; Swift.String
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="233fb6aa3138ff458677570be860a7dbf2c53b19">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            LoginPresenter.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="233fb6aa3138ff458677570be860a7dbf2c53b19" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.LoginPresenter.__allocating_init(CleanExample.AuthenticationUseCase) -&gt; CleanExample.LoginPresenter
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.LoginPresenter.attachView(CleanExample.LoginViewProtocol) -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.LoginPresenter.doLogin(Swift.String, password: Swift.String) -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="3fb6f68d55db32c48f6f87ab27a20b60ec06188a">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            AuthenticationServiceLocator.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="3fb6f68d55db32c48f6f87ab27a20b60ec06188a" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.AuthenticationServiceLocator.restApi.getter : CleanExample.AuthenticationRestApi
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.AuthenticationServiceLocator.dataSource.getter : CleanExample.AuthenticationDataSource
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.AuthenticationServiceLocator.repository.getter : CleanExample.AuthenticationRepositoryProtocol
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.AuthenticationServiceLocator.useCases.getter : CleanExample.AuthenticationUseCase
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="2efc13130e3bf580721cf8bae922cff72b06716f">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            AuthenticationUseCase.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="2efc13130e3bf580721cf8bae922cff72b06716f" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.AuthenticationUseCase.executeLogin(with: CleanExample.LoginModel, completionHandler: (Swift.Optional&lt;CleanExample.CustomError&gt;) -&gt; ()) -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="433736456b24635a0e13c1e7dd740d033e668779">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            HomePresenter.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="433736456b24635a0e13c1e7dd740d033e668779" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.HomePresenter.attachView(CleanExample.HomeViewProtocol) -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.HomePresenter.getUserInformation() -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="f8546309e469ed8673b120e4be96981089ceca52">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            StubAthenticationService.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="f8546309e469ed8673b120e4be96981089ceca52" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.StubAthenticationService.stubAll() -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.StubAthenticationService.(stubAuthorize in _150011560AED0ACC1001C00F25DAC72C)() -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="c39db853f1d1d23d8fcc05650171066238ea9d5b">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            AlamofireHeaders.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="c39db853f1d1d23d8fcc05650171066238ea9d5b" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            static CleanExample.AlamofireHeaders.headers(Swift.Bool) -&gt; Swift.Dictionary&lt;Swift.String, Swift.String&gt;
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            static CleanExample.AlamofireHeaders.deafultHeaders() -&gt; Swift.Dictionary&lt;Swift.String, Swift.String&gt;
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="f946dcd9729a8be35bdc63accadcd96efa0b66dd">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            AuthenticationRepository.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="f946dcd9729a8be35bdc63accadcd96efa0b66dd" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.AuthenticationRepository.init(datasource: CleanExample.AuthenticationDataSource) -&gt; CleanExample.AuthenticationRepository
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.AuthenticationRepository.executeLogin(with: CleanExample.LoginModel, completionHandler: (Swift.Optional&lt;CleanExample.TokenModel&gt;, Swift.Optional&lt;CleanExample.CustomError&gt;) -&gt; ()) -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="be392a46cbdccbb9af77e140ac777668daa59cc9">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            LoginViewController.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="be392a46cbdccbb9af77e140ac777668daa59cc9" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.LoginViewController.__allocating_init(CleanExample.LoginPresenterProtocol) -&gt; CleanExample.LoginViewController
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.LoginViewController.viewDidLoad() -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.LoginViewController.viewWillAppear(Swift.Bool) -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.LoginViewController.onLoginButtonTap(Any) -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.LoginViewController.showActivityIndicator() -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.LoginViewController.hideActivityIndicator() -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.LoginViewController.showErrorMessage(CleanExample.CustomError) -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.LoginViewController.showHome() -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="dc68e70974a7ab08b1a1e5f172e65dec667289ee">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            StubService.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="dc68e70974a7ab08b1a1e5f172e65dec667289ee" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            static CleanExample.StubService.stubAll() -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="bd49eb950d135da1c51e2029e946135be0c3a1e8">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            AuthenticationMockDataSource.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="bd49eb950d135da1c51e2029e946135be0c3a1e8" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.AuthenticationMockDataSource.__allocating_init(restApi: CleanExample.AuthenticationRestApi) -&gt; CleanExample.AuthenticationMockDataSource
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.AuthenticationMockDataSource.executeLogin(with: CleanExample.LoginEntity, completionHandler: (Swift.Optional&lt;CleanExample.TokenEntity&gt;, Swift.Optional&lt;CleanExample.CustomError&gt;) -&gt; ()) -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+        <!-- Single file starts here -->
+        
+        <div class="row file-row" file-id="9171a32d86b1c27b689455d111a411785041ae92">
+        
+          <div class="col-xs-10 col-md-10 col-lg-10">
+            <span><img class="file-icon" src="resources/file_swift.png"/></span>
+            RootViewController.swift
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <div class="functions-wrapper" id="9171a32d86b1c27b689455d111a411785041ae92" style="display: none;">
+                <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.RootViewController.viewDidLoad() -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+        <!-- Single function starts here-->
+        <div class="row function-row">
+          <div class="col-xs-10 col-md-10 col-lg-10 function-name">
+            CleanExample.RootViewController.showLogin() -&gt; ()
+          </div>
+          <div class="col-xs-2 col-md-2 col-lg-2 text-right">
+            100.00% <span><div class="circle-sm" style="background-color: #1FCB32;"></div></span>
+          </div>
+        </div>
+        <!-- Single function ends here -->
+
+        </div>
+        <!-- Single file ends here -->
+
+      </div>
+      <!-- File row ends here -->
+    </div>
+    </div>
+    <!-- Target details end here -->
+
+    <!-- Footer starts here -->
+    <div class="row footer">
+      <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8 text-center">
+        xcov - Xcode coverage reports without hassle - A tool developed by
+        <a href="https://github.com/nakiostudio" target="_blank">Carlos Vidal</a> -
+        <a href="https://twitter.com/carlostify" target="_blank">@carlostify</a>
+      </div>
+    </div>
+    <!-- Footer ends here -->
+  </div>
+  <!-- Body template ends here -->
+</body>
+</html>

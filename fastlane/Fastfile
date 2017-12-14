@@ -13,6 +13,12 @@ platform :ios do
       workspace:"CleanExample.xcworkspace", 
       scheme: "CleanExample"
     )
+    xcov(
+      workspace: "CleanExample.xcworkspace",
+      scheme: "CleanExample",
+      output_directory: "xcov_output",
+      only_project_targets: true
+    )
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"

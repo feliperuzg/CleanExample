@@ -13,6 +13,10 @@ class CodableMock: CodableHelper {
     override func decodeNetworkObject<D>(object: Data) -> D? where D : Decodable {
         return nil
     }
+
+    override func decodeObjectFrom<E, D>(object: E) -> D? where E : Encodable, D : Decodable {
+        return nil
+    }
 }
 
 class AuthenticationRepositorySpec: XCTestCase {

@@ -17,7 +17,7 @@ struct AuthenticationRepository: AuthenticationRepositoryProtocol {
     }
 
     func executeLogin(with credentials: LoginModel, completionHandler: @escaping (TokenModel?, CustomError?) -> Void) {
-        if let entity: LoginEntity = codableHelper.decodeObjectFrom(object: credentials), entity != nil {
+        if let entity: LoginEntity = codableHelper.decodeObjectFrom(object: credentials) {
             datasource.executeLogin(with: entity) { token, error in
                 if let token = token, let model: TokenModel = CodableHelper().decodeObjectFrom(object: token) {
                     completionHandler(model, nil)

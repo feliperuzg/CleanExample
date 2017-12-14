@@ -43,4 +43,14 @@ class HomeViewControllerSpec: XCTestCase {
 
         XCTAssertTrue(presenter.getUserInformationCalled)
     }
+
+    func testHomeViewChangesName() {
+        sut = HomeViewController(HomePresenter())
+
+        sut.loadView()
+
+        sut.displayUserInformation(user: "Lala")
+
+        XCTAssertEqual(sut.userLabel.text, "Lala")
+    }
 }

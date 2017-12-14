@@ -63,7 +63,7 @@ class StubServiceBase {
 
     func addStub(url: String, fileName: String, method: HTTPMethod, dataType: DataType? = nil, code: Int? = nil) {
         let data = readData(dataType: dataType ?? .dictionary, fileName: fileName)
-        MockingjayProtocol.addStub(matcher: http(method, uri: url), delay: 3, builder: json(data, status: code ?? 200))
+        MockingjayProtocol.addStub(matcher: http(method, uri: url), delay: 1, builder: json(data, status: code ?? 200))
     }
 
     private func readData(dataType: DataType, fileName: String) -> Any {

@@ -13,7 +13,7 @@ class AuthenticationMockApiSpec: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        sut = AuthenticationMockApi()
+        sut = AuthenticationMockApi(networkConfiguration: NetworkConfiguration())
     }
 
     override func tearDown() {
@@ -23,28 +23,22 @@ class AuthenticationMockApiSpec: XCTestCase {
 
     func testApiCanReturnEntity() {
         let exp = expectation(description: "testApiCanReturnEntity")
-        sut.executeLogin(withCredentials: "user", password: "pass", onSuccess: { (entity, token) in
+        let model = LoginEntity(userName: "user", password: "pass")
+        sut.executeLogin(with: model) { (entity, error) in
             XCTAssertNotNil(entity)
-            XCTAssertEqual(entity.firstName, "Juan")
-            XCTAssertEqual(token, "asdfghjkl1234567890")
+            XCTAssertEqual(entity?.token, "3IHrSxMGdpom0wRd_vJW6YLXV3Ui_u16FhjtoQbnOPw")
             exp.fulfill()
-        }, onError: { (error) in
-            XCTFail(error.localizedDescription)
-            exp.fulfill()
-        })
+        }
         waitForExpectations(timeout: 3, handler: nil)
     }
 
     func testApiCanHanldeError() {
         let exp = expectation(description: "testApiCanHanldeError")
-        sut.executeLogin(withCredentials: "", password: "pass", onSuccess: { (entity, token) in
-            XCTFail("Neither Token \(token) or UserEntity: \(entity.firstName) have use here")
-            exp.fulfill()
-        }, onError: { (error) in
+        let model = LoginEntity(userName: "", password: "")
+        sut.executeLogin(with: model) { (entity, error) in
             XCTAssertNotNil(error)
-            XCTAssertEqual(error.localizedDescription, "BAD REQUEST")
             exp.fulfill()
-        })
+        }
         waitForExpectations(timeout: 3, handler: nil)
     }
 }

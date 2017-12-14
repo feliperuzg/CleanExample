@@ -33,8 +33,6 @@ class UserDefaultsRepositorySpec: XCTestCase {
         let sut = locator.repository
         UserDefaults.standard.set("1111", forKey: "token")
 
-        sut.getAuthToken { (token) in
-            XCTAssertEqual(token, "1111")
-        }
+        XCTAssertEqual(sut.authToken(), "1111")
     }
 }

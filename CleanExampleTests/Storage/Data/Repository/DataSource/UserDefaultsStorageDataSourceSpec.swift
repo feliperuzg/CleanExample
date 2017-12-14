@@ -31,8 +31,6 @@ class UserDefaultsStorageDataSourceSpec: XCTestCase {
     func testDataSourceCanReadToken() {
         let sut = locator.dataSource
         UserDefaults.standard.set("4321", forKey: "token")
-        sut.getAuthToken { (token) in
-            XCTAssertEqual(token, "4321")
-        }
+        XCTAssertEqual(sut.authToken(), "4321")
     }
 }

@@ -23,7 +23,7 @@ class LoginPresenter: LoginPresenterProtocol {
     func doLogin(_ user: String, password pass: String) {
         loginView?.showActivityIndicator()
         let model = LoginModel(userName: user, password: pass)
-        loginService.executeLogin(withm: model) { error in
+        loginService.executeLogin(with: model) { error in
             self.loginView?.hideActivityIndicator()
             if let error = error {
                 self.loginView?.showErrorMessage(error)

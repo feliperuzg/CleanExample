@@ -33,7 +33,10 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func onLoginButtonTap(_: Any) {
-        loginPresenter?.doLogin(userName.text!, password: userPassword.text!)
+        view.endEditing(true)
+        if let user = userName.text, let pass = userPassword.text {
+            loginPresenter?.doLogin(user, password: pass)
+        }
     }
 }
 

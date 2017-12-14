@@ -28,20 +28,18 @@ class LoginViewMock: NSObject, LoginViewProtocol {
 }
 
 class AuthenticationApiMock: AuthenticationMockApi {
-    override func executeLogin(withCredentials userName: String, password: String,
-                               onSuccess: @escaping (UserEntity, String) -> Void,
-                               onError: @escaping (CustomError) -> Void) {
-        if userName.isEmpty || password.isEmpty {
-            onError(error)
+    override func executeLogin(with credentials: LoginEntity, completionHandler: @escaping (TokenEntity?, CustomError?) -> Void) {
+        if credentials.userName.isEmpty || credentials.password.isEmpty {
+            completionHandler(nil, CustomError(localizedDescription: "Error", code: 400))
         } else {
-            onSuccess(UserEntity(fromDictionary: response), token)
+            completionHandler(TokenEntity(token: "123123"), nil)
         }
     }
 }
 
 class MockServiceLocator: AuthenticationServiceLocator {
     override var restApi: AuthenticationRestApi {
-        return AuthenticationApiMock()
+        return AuthenticationApiMock(networkConfiguration: NetworkConfiguration())
     }
 }
 

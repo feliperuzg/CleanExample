@@ -34,7 +34,8 @@ class AuthenticationMockApi: AuthenticationRestApi {
                 !credentials.password.isEmpty {
                 completionHandler(token, nil)
             } else {
-                completionHandler(nil, CustomError(localizedTitle: "", localizedDescription: "", code: 400))
+                let error = CustomError(localizedTitle: "Error", localizedDescription: "User or password incorrect", code: 400)
+                completionHandler(nil, error)
             }
         }
     }

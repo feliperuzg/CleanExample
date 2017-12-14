@@ -9,7 +9,10 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
-    scan
+    scan(
+      workspace:"CleanExample.xcworkspace", 
+      scheme: "CleanExample"
+    )
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
@@ -39,9 +42,9 @@ platform :ios do
     case lane
     when :test        
       slack(
-      message: "All tests passed"
+      message: "All tests passed",
       success: true
-      )
+    )
     end
   end
 

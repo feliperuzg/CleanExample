@@ -21,7 +21,4 @@ class RootViewController: UINavigationController {
         loginView = LoginViewController(presenter)
         pushViewController(loginView, animated: true)
     }
-
-    func displayMainView() {
-    }
 }

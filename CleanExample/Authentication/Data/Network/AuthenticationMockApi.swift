@@ -29,12 +29,16 @@ class AuthenticationMockApi: AuthenticationRestApi {
         AlamofireSession.execute(url, .post, params) { response in
             if
                 let data = response.data,
-                let token: TokenEntity = try? CodableHelper().decodeNetworkObject(object: data),
+                let token: TokenEntity = CodableHelper().decodeNetworkObject(object: data),
                 !credentials.userName.isEmpty,
                 !credentials.password.isEmpty {
                 completionHandler(token, nil)
             } else {
-                let error = CustomError(localizedTitle: "Error", localizedDescription: "User or password incorrect", code: 400)
+                let error = CustomError(
+                    localizedTitle: "Error",
+                    localizedDescription: "User or password incorrect",
+                    code: 400
+                )
                 completionHandler(nil, error)
             }
         }

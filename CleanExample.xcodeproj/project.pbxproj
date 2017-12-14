@@ -18,6 +18,9 @@
 		A832E9FC1FE165AA00EB29FD /* AlamofireHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832E9FB1FE165AA00EB29FD /* AlamofireHeaders.swift */; };
 		A832E9FE1FE1669C00EB29FD /* StorageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832E9FD1FE1669C00EB29FD /* StorageConstants.swift */; };
 		A832EA031FE17C7700EB29FD /* CodableHelperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832EA021FE17C7700EB29FD /* CodableHelperSpec.swift */; };
+		A832EA051FE1FD7F00EB29FD /* LoginEntityData.json in Resources */ = {isa = PBXBuildFile; fileRef = A832EA041FE1FD7F00EB29FD /* LoginEntityData.json */; };
+		A832EA081FE2076000EB29FD /* HomePresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832EA071FE2076000EB29FD /* HomePresenterSpec.swift */; };
+		A832EA0A1FE2076D00EB29FD /* HomeViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832EA091FE2076D00EB29FD /* HomeViewControllerSpec.swift */; };
 		A860515B1F21039E0048C86E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A860515A1F21039E0048C86E /* RootViewController.swift */; };
 		A86051671F21334F0048C86E /* StorageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86051661F21334F0048C86E /* StorageDataSource.swift */; };
 		A86051691F2134460048C86E /* UserDefaultsStorageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86051681F2134460048C86E /* UserDefaultsStorageDataSource.swift */; };
@@ -67,8 +70,6 @@
 		A8D016461F269F37002E5B0D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D016441F269F37002E5B0D /* HomeViewController.swift */; };
 		A8D016471F269F37002E5B0D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D016451F269F37002E5B0D /* HomeViewController.xib */; };
 		A8D016491F269F4D002E5B0D /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D016481F269F4D002E5B0D /* HomePresenter.swift */; };
-		A8D016551F26A661002E5B0D /* ContactsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D016541F26A661002E5B0D /* ContactsRepositoryProtocol.swift */; };
-		A8D016581F26A6B2002E5B0D /* ContactsDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D016571F26A6B2002E5B0D /* ContactsDataSourceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,9 @@
 		A832E9FB1FE165AA00EB29FD /* AlamofireHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireHeaders.swift; sourceTree = "<group>"; };
 		A832E9FD1FE1669C00EB29FD /* StorageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageConstants.swift; sourceTree = "<group>"; };
 		A832EA021FE17C7700EB29FD /* CodableHelperSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableHelperSpec.swift; sourceTree = "<group>"; };
+		A832EA041FE1FD7F00EB29FD /* LoginEntityData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LoginEntityData.json; sourceTree = "<group>"; };
+		A832EA071FE2076000EB29FD /* HomePresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterSpec.swift; sourceTree = "<group>"; };
+		A832EA091FE2076D00EB29FD /* HomeViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSpec.swift; sourceTree = "<group>"; };
 		A860515A1F21039E0048C86E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		A86051661F21334F0048C86E /* StorageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageDataSource.swift; sourceTree = "<group>"; };
 		A86051681F2134460048C86E /* UserDefaultsStorageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorageDataSource.swift; sourceTree = "<group>"; };
@@ -157,8 +161,6 @@
 		A8D016441F269F37002E5B0D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A8D016451F269F37002E5B0D /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		A8D016481F269F4D002E5B0D /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		A8D016541F26A661002E5B0D /* ContactsRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsRepositoryProtocol.swift; sourceTree = "<group>"; };
-		A8D016571F26A6B2002E5B0D /* ContactsDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDataSourceProtocol.swift; sourceTree = "<group>"; };
 		ADE4331A80A815D81138BAFA /* Pods_CleanExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E823A11C581E1A41516A73E5 /* Pods-CleanExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanExampleTests/Pods-CleanExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EEC61B1F4C78909DAC6BA7C4 /* Pods-CleanExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanExampleTests/Pods-CleanExampleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				A832EA021FE17C7700EB29FD /* CodableHelperSpec.swift */,
+				A832EA041FE1FD7F00EB29FD /* LoginEntityData.json */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -282,6 +285,15 @@
 			children = (
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		A832EA061FE2074900EB29FD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A832EA071FE2076000EB29FD /* HomePresenterSpec.swift */,
+				A832EA091FE2076D00EB29FD /* HomeViewControllerSpec.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		A860515C1F21326C0048C86E /* Storage */ = {
@@ -455,7 +467,6 @@
 				A8ACFB031F1E96770065306D /* AppDelegate.swift */,
 				A8ACFB0A1F1E96770065306D /* Assets.xcassets */,
 				A88905AB1F1FA79F00298185 /* Authentication */,
-				A8D0164A1F26A507002E5B0D /* Contacts */,
 				A8C4BAD11FE05FE500928C58 /* Core */,
 				A8D0163E1F2682F6002E5B0D /* Home */,
 				A8ACFB0F1F1E96770065306D /* Info.plist */,
@@ -467,6 +478,7 @@
 		A8ACFB171F1E96770065306D /* CleanExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				A832EA061FE2074900EB29FD /* Home */,
 				A86051701F214AD80048C86E /* Storage */,
 				A8A722931F1FA9EF00DF908D /* Authentication */,
 				A8A722941F1FA9F800DF908D /* Core */,
@@ -638,87 +650,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		A8D0164A1F26A507002E5B0D /* Contacts */ = {
-			isa = PBXGroup;
-			children = (
-				A8D0164B1F26A520002E5B0D /* Data */,
-				A8D016501F26A567002E5B0D /* DI */,
-				A8D016511F26A56B002E5B0D /* Domain */,
-				A8D016521F26A577002E5B0D /* View */,
-			);
-			path = Contacts;
-			sourceTree = "<group>";
-		};
-		A8D0164B1F26A520002E5B0D /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				A8D0164C1F26A527002E5B0D /* Entity */,
-				A8D0164E1F26A542002E5B0D /* Network */,
-				A8D0164D1F26A537002E5B0D /* Repository */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		A8D0164C1F26A527002E5B0D /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		A8D0164D1F26A537002E5B0D /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				A8D0164F1F26A555002E5B0D /* DataSource */,
-				A8D016541F26A661002E5B0D /* ContactsRepositoryProtocol.swift */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		A8D0164E1F26A542002E5B0D /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		A8D0164F1F26A555002E5B0D /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-				A8D016571F26A6B2002E5B0D /* ContactsDataSourceProtocol.swift */,
-			);
-			path = DataSource;
-			sourceTree = "<group>";
-		};
-		A8D016501F26A567002E5B0D /* DI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DI;
-			sourceTree = "<group>";
-		};
-		A8D016511F26A56B002E5B0D /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				A8D016531F26A585002E5B0D /* UseCase */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		A8D016521F26A577002E5B0D /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		A8D016531F26A585002E5B0D /* UseCase */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UseCase;
-			sourceTree = "<group>";
-		};
 		C06EB823A1306CDDAEB1E328 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -857,6 +788,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A832EA051FE1FD7F00EB29FD /* LoginEntityData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1095,7 +1027,6 @@
 				A860516D1F2136C80048C86E /* UserDefaultsRepository.swift in Sources */,
 				A86051691F2134460048C86E /* UserDefaultsStorageDataSource.swift in Sources */,
 				A8CF94F51F1FB7C800A4CBDA /* LoginPresenter.swift in Sources */,
-				A8D016581F26A6B2002E5B0D /* ContactsDataSourceProtocol.swift in Sources */,
 				A8CF94FD1F1FC0E900A4CBDA /* LoginViewProtocol.swift in Sources */,
 				A8C4BAC81FE0577800928C58 /* LoginEntity.swift in Sources */,
 				A8D016431F269F23002E5B0D /* HomePresenterProtocol.swift in Sources */,
@@ -1103,7 +1034,6 @@
 				A8A7229E1F1FAE3700DF908D /* AuthenticationServiceLocator.swift in Sources */,
 				A8C4BAC41FE0298200928C58 /* CodableHelper.swift in Sources */,
 				A8C8A8DD1F1EB8310038B3F2 /* AuthenticationUseCase.swift in Sources */,
-				A8D016551F26A661002E5B0D /* ContactsRepositoryProtocol.swift in Sources */,
 				A8D016491F269F4D002E5B0D /* HomePresenter.swift in Sources */,
 				A832E9F61FE15C2000EB29FD /* StubAthenticationService.swift in Sources */,
 				A832E9FC1FE165AA00EB29FD /* AlamofireHeaders.swift in Sources */,
@@ -1119,6 +1049,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8C8A8ED1F1F985B0038B3F2 /* CustomErrorSpec.swift in Sources */,
+				A832EA0A1FE2076D00EB29FD /* HomeViewControllerSpec.swift in Sources */,
 				A86051751F214B090048C86E /* UserDefaultsStorageDataSourceSpec.swift in Sources */,
 				A86051771F214B320048C86E /* UserDefaultsRepositorySpec.swift in Sources */,
 				A8C8A8EF1F1F99C60038B3F2 /* AuthenticationUseCaseSpec.swift in Sources */,
@@ -1128,6 +1059,7 @@
 				A8A7229C1F1FAC4E00DF908D /* AuthenticationRepositorySpec.swift in Sources */,
 				A8CF95001F1FF25000A4CBDA /* LoginPresenterSpec.swift in Sources */,
 				A8CF94EE1F1FB12A00A4CBDA /* AuthenticationMockDataSourceSpec.swift in Sources */,
+				A832EA081FE2076000EB29FD /* HomePresenterSpec.swift in Sources */,
 				A832EA031FE17C7700EB29FD /* CodableHelperSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

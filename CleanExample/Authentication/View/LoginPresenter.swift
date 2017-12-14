@@ -28,7 +28,7 @@ class LoginPresenter: LoginPresenterProtocol {
             if let error = error {
                 self.loginView?.showErrorMessage(error)
             } else {
-                // TODO: Show Home
+                self.loginView?.showHome()
             }
         }
     }

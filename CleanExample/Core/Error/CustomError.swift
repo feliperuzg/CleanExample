@@ -8,13 +8,19 @@
 
 struct CustomError: Error {
 
+    private enum Defaults {
+        static let title = "Error"
+        static let description = "No podemos atender su solicitud en estos momentos"
+        static let code = 500
+    }
+
     var localizedTitle: String
     var localizedDescription: String
     var code: Int
 
-    init(localizedTitle: String = "Error", localizedDescription: String, code: Int) {
-        self.localizedTitle = localizedTitle
-        self.localizedDescription = localizedDescription
-        self.code = code
+    init(localizedTitle: String? = nil, localizedDescription: String? = nil, code: Int? = nil) {
+        self.localizedTitle = localizedTitle ?? Defaults.title
+        self.localizedDescription = localizedDescription ?? Defaults.description
+        self.code = code ?? Defaults.code
     }
 }

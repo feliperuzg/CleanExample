@@ -17,14 +17,16 @@ struct AuthenticationRepository: AuthenticationRepositoryProtocol {
     }
 
     func executeLogin(with credentials: LoginModel, completionHandler: @escaping (TokenModel?, CustomError?) -> Void) {
-        let entity: LoginEntity = CodableHelper().decodeObjectFrom(object: credentials)
-        datasource.executeLogin(with: entity) { token, error in
-            if let token = token {
-                let model: TokenModel = CodableHelper().decodeObjectFrom(object: token)
-                completionHandler(model, nil)
-            } else {
-                completionHandler(nil, error)
+        if let entity: LoginEntity = CodableHelper().decodeObjectFrom(object: credentials) {
+            datasource.executeLogin(with: entity) { token, error in
+                if let token = token, let model: TokenModel = CodableHelper().decodeObjectFrom(object: token) {
+                    completionHandler(model, nil)
+                } else {
+                    completionHandler(nil, error)
+                }
             }
+        } else {
+            completionHandler(nil, CustomError())
         }
     }
 }

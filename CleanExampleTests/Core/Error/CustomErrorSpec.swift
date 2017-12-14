@@ -29,4 +29,12 @@ class CustomErrorSpec: XCTestCase {
         XCTAssertEqual(error.localizedTitle, title)
         XCTAssertEqual(error.localizedDescription, desc)
     }
+
+    func testCanCreateErrorWithDefaultValues() {
+        let error = CustomError()
+        XCTAssertNotNil(error)
+        XCTAssertEqual(error.code, 500)
+        XCTAssertEqual(error.localizedTitle, "Error")
+        XCTAssertEqual(error.localizedDescription, "No podemos atender su solicitud en estos momentos")
+    }
 }

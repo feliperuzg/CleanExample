@@ -61,4 +61,13 @@ extension LoginViewController: LoginViewProtocol {
         alert.addAction(aceptar)
         present(alert, animated: true, completion: nil)
     }
+
+    func showHome() {
+        if let window = UIApplication.shared.keyWindow {
+            let presenter = HomePresenter()
+            let viewController = HomeViewController(presenter)
+            viewController.navigationItem.hidesBackButton = true
+            window.rootViewController = UINavigationController(rootViewController: viewController)
+        }
+    }
 }

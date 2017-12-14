@@ -13,6 +13,7 @@ class LoginViewMock: NSObject, LoginViewProtocol {
     var showActivityCalled = false
     var hideActivityCalled = false
     var showErrorCalled = false
+    var showHomeCalled = false
 
     func showActivityIndicator() {
         showActivityCalled = true
@@ -24,6 +25,10 @@ class LoginViewMock: NSObject, LoginViewProtocol {
 
     func showErrorMessage(_ error: CustomError) {
         showErrorCalled = true
+    }
+
+    func showHome() {
+        showHomeCalled = true
     }
 }
 
@@ -86,5 +91,15 @@ class LoginPresenterSpec: XCTestCase {
         sut.doLogin("", password: "")
 
         XCTAssertTrue(viewController.showErrorCalled)
+    }
+
+    func testPresenterCallsHomeView() {
+        sut = LoginPresenter(fakeLocator.useCases)
+        let viewController = LoginViewMock()
+        sut.attachView(viewController)
+
+        sut.doLogin("lala", password: "lalo")
+
+        XCTAssertTrue(viewController.showHomeCalled)
     }
 }

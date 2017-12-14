@@ -10,20 +10,29 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var userLabel: UILabel!
 
-        // Do any additional setup after loading the view.
+    private var homePresenter: HomePresenterProtocol?
+
+    convenience init(_ presenter: HomePresenterProtocol) {
+        self.init()
+        homePresenter = presenter
+        homePresenter?.attachView(self)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Home"
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        homePresenter?.getUserInformation()
     }
 }
 
 extension HomeViewController: HomeViewProtocol {
-    func displayUserInformation(user _: String) {
-        // TODO: Displays user header
+    func displayUserInformation(user: String) {
+        userLabel.text = user
     }
 }

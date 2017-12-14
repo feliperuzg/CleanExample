@@ -21,6 +21,7 @@
 		A832EA051FE1FD7F00EB29FD /* LoginEntityData.json in Resources */ = {isa = PBXBuildFile; fileRef = A832EA041FE1FD7F00EB29FD /* LoginEntityData.json */; };
 		A832EA081FE2076000EB29FD /* HomePresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832EA071FE2076000EB29FD /* HomePresenterSpec.swift */; };
 		A832EA0A1FE2076D00EB29FD /* HomeViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832EA091FE2076D00EB29FD /* HomeViewControllerSpec.swift */; };
+		A832EA0C1FE209D500EB29FD /* NetworkConfigurationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832EA0B1FE209D500EB29FD /* NetworkConfigurationSpec.swift */; };
 		A860515B1F21039E0048C86E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A860515A1F21039E0048C86E /* RootViewController.swift */; };
 		A86051671F21334F0048C86E /* StorageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86051661F21334F0048C86E /* StorageDataSource.swift */; };
 		A86051691F2134460048C86E /* UserDefaultsStorageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86051681F2134460048C86E /* UserDefaultsStorageDataSource.swift */; };
@@ -46,6 +47,9 @@
 		A8C4BAD61FE0600F00928C58 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C4BAD51FE0600F00928C58 /* Domain.swift */; };
 		A8C4BAD81FE0601F00928C58 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C4BAD71FE0601F00928C58 /* NetworkConstants.swift */; };
 		A8C4BADA1FE075F800928C58 /* NetworkConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8C4BAD91FE075F800928C58 /* NetworkConfiguration.plist */; };
+		A8C54B501FE20BAB00224ADB /* StubServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C54B4F1FE20BAB00224ADB /* StubServiceTests.swift */; };
+		A8C54B521FE20F4F00224ADB /* StubServiceBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C54B511FE20F4F00224ADB /* StubServiceBaseTests.swift */; };
+		A8C54B531FE2124600224ADB /* LoginEntityData.json in Resources */ = {isa = PBXBuildFile; fileRef = A832EA041FE1FD7F00EB29FD /* LoginEntityData.json */; };
 		A8C8A8DD1F1EB8310038B3F2 /* AuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8A8DC1F1EB8310038B3F2 /* AuthenticationUseCase.swift */; };
 		A8C8A8DF1F1EB9330038B3F2 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8A8DE1F1EB9330038B3F2 /* AuthenticationRepository.swift */; };
 		A8C8A8E11F1EBA5B0038B3F2 /* AuthenticationRestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8A8E01F1EBA5B0038B3F2 /* AuthenticationRestApi.swift */; };
@@ -106,6 +110,7 @@
 		A832EA041FE1FD7F00EB29FD /* LoginEntityData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LoginEntityData.json; sourceTree = "<group>"; };
 		A832EA071FE2076000EB29FD /* HomePresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterSpec.swift; sourceTree = "<group>"; };
 		A832EA091FE2076D00EB29FD /* HomeViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSpec.swift; sourceTree = "<group>"; };
+		A832EA0B1FE209D500EB29FD /* NetworkConfigurationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigurationSpec.swift; sourceTree = "<group>"; };
 		A860515A1F21039E0048C86E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		A86051661F21334F0048C86E /* StorageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageDataSource.swift; sourceTree = "<group>"; };
 		A86051681F2134460048C86E /* UserDefaultsStorageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorageDataSource.swift; sourceTree = "<group>"; };
@@ -137,6 +142,8 @@
 		A8C4BAD51FE0600F00928C58 /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
 		A8C4BAD71FE0601F00928C58 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		A8C4BAD91FE075F800928C58 /* NetworkConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NetworkConfiguration.plist; sourceTree = "<group>"; };
+		A8C54B4F1FE20BAB00224ADB /* StubServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubServiceTests.swift; sourceTree = "<group>"; };
+		A8C54B511FE20F4F00224ADB /* StubServiceBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubServiceBaseTests.swift; sourceTree = "<group>"; };
 		A8C8A8DC1F1EB8310038B3F2 /* AuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUseCase.swift; sourceTree = "<group>"; };
 		A8C8A8DE1F1EB9330038B3F2 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
 		A8C8A8E01F1EBA5B0038B3F2 /* AuthenticationRestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRestApi.swift; sourceTree = "<group>"; };
@@ -283,6 +290,8 @@
 		A832EA011FE17C3D00EB29FD /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A8C54B4E1FE20B8100224ADB /* Stubs */,
+				A8C54B4D1FE20B7A00224ADB /* NetworkConfiguration */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -517,6 +526,23 @@
 				A832E9FB1FE165AA00EB29FD /* AlamofireHeaders.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		A8C54B4D1FE20B7A00224ADB /* NetworkConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				A832EA0B1FE209D500EB29FD /* NetworkConfigurationSpec.swift */,
+			);
+			path = NetworkConfiguration;
+			sourceTree = "<group>";
+		};
+		A8C54B4E1FE20B8100224ADB /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				A8C54B4F1FE20BAB00224ADB /* StubServiceTests.swift */,
+				A8C54B511FE20F4F00224ADB /* StubServiceBaseTests.swift */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		A8C8A8D51F1EB7370038B3F2 /* Data */ = {
@@ -775,6 +801,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8C54B531FE2124600224ADB /* LoginEntityData.json in Resources */,
 				A8C8A8E61F1EBAFE0038B3F2 /* login200.json in Resources */,
 				A8C4BADA1FE075F800928C58 /* NetworkConfiguration.plist in Resources */,
 				A832E9F81FE15CED00EB29FD /* stubAuthorize().json in Resources */,
@@ -1050,6 +1077,7 @@
 			files = (
 				A8C8A8ED1F1F985B0038B3F2 /* CustomErrorSpec.swift in Sources */,
 				A832EA0A1FE2076D00EB29FD /* HomeViewControllerSpec.swift in Sources */,
+				A8C54B521FE20F4F00224ADB /* StubServiceBaseTests.swift in Sources */,
 				A86051751F214B090048C86E /* UserDefaultsStorageDataSourceSpec.swift in Sources */,
 				A86051771F214B320048C86E /* UserDefaultsRepositorySpec.swift in Sources */,
 				A8C8A8EF1F1F99C60038B3F2 /* AuthenticationUseCaseSpec.swift in Sources */,
@@ -1059,7 +1087,9 @@
 				A8A7229C1F1FAC4E00DF908D /* AuthenticationRepositorySpec.swift in Sources */,
 				A8CF95001F1FF25000A4CBDA /* LoginPresenterSpec.swift in Sources */,
 				A8CF94EE1F1FB12A00A4CBDA /* AuthenticationMockDataSourceSpec.swift in Sources */,
+				A8C54B501FE20BAB00224ADB /* StubServiceTests.swift in Sources */,
 				A832EA081FE2076000EB29FD /* HomePresenterSpec.swift in Sources */,
+				A832EA0C1FE209D500EB29FD /* NetworkConfigurationSpec.swift in Sources */,
 				A832EA031FE17C7700EB29FD /* CodableHelperSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

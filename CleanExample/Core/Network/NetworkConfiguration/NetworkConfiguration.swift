@@ -41,27 +41,18 @@ class NetworkConfiguration: NSObject {
         }
     }
 
-    private func endpointFor(domain: Domain, endpoint: String, fullURL: Bool = true) -> String {
+    private func endpointFor(domain: Domain, endpoint: String) -> String {
         guard
             let configurationDict = configurationDictionary,
             let dict = configurationDict[domain.rawValue] as? [String: AnyObject],
-            let baseURL = dict[NetworkConstants.baseURL] as? String
-        else { fatalError("Could not find \(NetworkConstants.baseURL) in \(domain)") }
-        let version = dict[NetworkConstants.version] as? String ?? ""
-        guard
+            let baseURL = dict[NetworkConstants.baseURL] as? String,
             let endpointsDict = dict[NetworkConstants.endpointKey] as? [String: String],
             let endpointURL = endpointsDict[endpoint]
         else { fatalError("Could not find \(endpoint) endpoint in \(domain)") }
-        var url: String
-        if version.isEmpty {
-            url = fullURL ? baseURL + endpointURL : endpointURL
-        } else {
-            url = fullURL ? "\(baseURL)/\(version)\(endpointURL)" : "/\(version)\(endpointURL)"
-        }
-        return url
+        return "\(baseURL)/\(endpointURL)"
     }
 
-    func authenticationURL(for endpoint: Endpoint.Authentication, fullURL: Bool = true) -> String {
-        return endpointFor(domain: Domain.auth, endpoint: endpoint.rawValue, fullURL: fullURL)
+    func authenticationURL(for endpoint: Endpoint.Authentication) -> String {
+        return endpointFor(domain: Domain.auth, endpoint: endpoint.rawValue)
     }
 }

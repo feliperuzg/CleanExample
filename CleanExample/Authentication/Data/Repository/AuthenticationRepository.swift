@@ -9,15 +9,15 @@
 import Foundation
 
 struct AuthenticationRepository: AuthenticationRepositoryProtocol {
-
     let datasource: AuthenticationDataSource
+    var codableHelper: CodableHelper = CodableHelper()
 
     init(datasource: AuthenticationDataSource) {
         self.datasource = datasource
     }
 
     func executeLogin(with credentials: LoginModel, completionHandler: @escaping (TokenModel?, CustomError?) -> Void) {
-        if let entity: LoginEntity = CodableHelper().decodeObjectFrom(object: credentials) {
+        if let entity: LoginEntity = codableHelper.decodeObjectFrom(object: credentials), entity != nil {
             datasource.executeLogin(with: entity) { token, error in
                 if let token = token, let model: TokenModel = CodableHelper().decodeObjectFrom(object: token) {
                     completionHandler(model, nil)

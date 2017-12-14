@@ -7,5 +7,6 @@
 //
 
 protocol AuthenticationRepositoryProtocol {
+    var codableHelper: CodableHelper { get set }
     func executeLogin(with credentials: LoginModel, completionHandler: @escaping (TokenModel?, CustomError?) -> Void)
 }

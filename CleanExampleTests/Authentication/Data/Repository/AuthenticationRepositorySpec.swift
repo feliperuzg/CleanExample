@@ -8,6 +8,13 @@
 
 import XCTest
 @testable import CleanExample
+
+class CodableMock: CodableHelper {
+    override func decodeNetworkObject<D>(object: Data) -> D? where D : Decodable {
+        return nil
+    }
+}
+
 class AuthenticationRepositorySpec: XCTestCase {
 
     let locator = AuthenticationServiceLocator()
@@ -33,5 +40,17 @@ class AuthenticationRepositorySpec: XCTestCase {
             exp.fulfill()
         }
         waitForExpectations(timeout: 3, handler: nil)
+    }
+
+    func testCanHandlerCorruptedModel() {
+        var sut = locator.repository
+        let model = LoginModel(userName: "", password: "")
+
+        sut.codableHelper = CodableMock()
+        sut.executeLogin(with: model) { (token, error) in
+            XCTAssertNil(token)
+            XCTAssertNotNil(error)
+            XCTAssertEqual(error?.localizedDescription, CustomError().localizedDescription)
+        }
     }
 }

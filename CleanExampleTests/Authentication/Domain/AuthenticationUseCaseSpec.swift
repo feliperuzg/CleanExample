@@ -9,7 +9,17 @@
 import XCTest
 @testable import CleanExample
 class AuthenticationUseCaseSpec: XCTestCase {
-    let locator = AuthenticationServiceLocator()
+    var locator: AuthenticationServiceLocator!
+
+    override func setUp() {
+        super.setUp()
+        locator = AuthenticationServiceLocator()
+    }
+    override func tearDown() {
+        super.tearDown()
+        locator = nil
+    }
+
     func testLoginSuccessful() {
         let sut = locator.useCases
         let exp = expectation(description: "testLoginSuccessful")

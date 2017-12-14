@@ -9,6 +9,14 @@
 import XCTest
 @testable import CleanExample
 
+class HomePresenterMock: HomePresenter {
+    var getUserInformationCalled = false
+
+    override func getUserInformation() {
+        getUserInformationCalled = true
+    }
+}
+
 class HomeViewControllerSpec: XCTestCase {
     var sut: HomeViewController!
     
@@ -21,5 +29,18 @@ class HomeViewControllerSpec: XCTestCase {
         sut = HomeViewController(HomePresenter())
 
         XCTAssertNotNil(sut)
+    }
+
+    func testHomeViewCycle() {
+        let presenter = HomePresenterMock()
+        sut = HomeViewController(presenter)
+
+        sut.viewDidLoad()
+
+        XCTAssertEqual(sut.title, "Home")
+        
+        sut.viewWillAppear(false)
+
+        XCTAssertTrue(presenter.getUserInformationCalled)
     }
 }

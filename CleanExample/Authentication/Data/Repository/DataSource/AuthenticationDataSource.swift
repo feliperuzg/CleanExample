@@ -8,11 +8,6 @@
 
 import Foundation
 
-protocol AuthenticationDataSource: class {
-    // swiftlint:disable type_name
-    associatedtype T
-    // swiftlint:enable type_name
-    func executeLogin(withCredentials userName: String, password: String,
-                      onSuccess: @escaping (T, String) -> Void,
-                      onError: @escaping (CustomError) -> Void)
+protocol AuthenticationDataSource {
+    func executeLogin(with credentials: LoginEntity, completionHandler: @escaping (TokenEntity?, CustomError?) -> Void)
 }

@@ -10,6 +10,5 @@ import Foundation
 
 protocol HomePresenterProtocol {
     func attachView(_ homeView: HomeViewProtocol)
-    func getContacts(onSuccess: @escaping ([Any]) -> Void,
-                     onError: @escaping (CustomError) -> Void)
+    func getUserInformation()
 }

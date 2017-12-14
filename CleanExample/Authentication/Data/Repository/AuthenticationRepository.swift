@@ -8,16 +8,25 @@
 
 import Foundation
 
-struct AuthenticationRepository<T: AuthenticationDataSource>: AuthenticationRepositoryProtocol where T.T == UserEntity {
-    let datasource: T
+struct AuthenticationRepository: AuthenticationRepositoryProtocol {
+    let datasource: AuthenticationDataSource
+    var codableHelper: CodableHelper = CodableHelper()
 
-    func executeLogin(withCredentials userName: String, password: String,
-                      onSuccess: @escaping (User, String) -> Void,
-                      onError: @escaping (CustomError) -> Void) {
-        datasource.executeLogin(withCredentials: userName, password: password, onSuccess: { (entity, token) in
-            onSuccess(NewUser(fromEntity: entity), token)
-        }, onError: { (error) in
-            onError(error)
-        })
+    init(datasource: AuthenticationDataSource) {
+        self.datasource = datasource
+    }
+
+    func executeLogin(with credentials: LoginModel, completionHandler: @escaping (TokenModel?, CustomError?) -> Void) {
+        if let entity: LoginEntity = codableHelper.decodeObjectFrom(object: credentials) {
+            datasource.executeLogin(with: entity) { token, error in
+                if let token = token, let model: TokenModel = CodableHelper().decodeObjectFrom(object: token) {
+                    completionHandler(model, nil)
+                } else {
+                    completionHandler(nil, error)
+                }
+            }
+        } else {
+            completionHandler(nil, CustomError())
+        }
     }
 }

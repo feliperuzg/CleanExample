@@ -14,29 +14,24 @@ class AuthenticationMockDataSourceSpec: XCTestCase {
     func testAuthenticationDataSourceCanReturnEntity() {
         let sut = locator.dataSource
         let exp = expectation(description: "testLoginDataSourceCanReturnEntity")
-
-        sut.executeLogin(withCredentials: "Juan", password: "1234", onSuccess: { (entity, token) in
-            XCTAssertNotNil(entity)
+        let entity = LoginEntity(userName: "Juan", password: "1234")
+        sut.executeLogin(with: entity) { (token, error) in
             XCTAssertNotNil(token)
+            XCTAssertNil(error)
             exp.fulfill()
-        }, onError: { (error) in
-            XCTFail(error.localizedDescription)
-            exp.fulfill()
-        })
-
+        }
         waitForExpectations(timeout: 3, handler: nil)
     }
 
     func testAuthenticationDataSourceCanReturnError() {
         let sut = locator.dataSource
         let exp = expectation(description: "testLoginDataSourceCanReturnError")
-        sut.executeLogin(withCredentials: "", password: "", onSuccess: { (entity, token) in
-            XCTFail("Neither Token \(token) or UserEntity: \(entity.firstName) have use here")
-            exp.fulfill()
-        }, onError: { (error) in
+        let entity = LoginEntity(userName: "", password: "")
+        sut.executeLogin(with: entity) { (token, error) in
             XCTAssertNotNil(error)
+            XCTAssertNil(token)
             exp.fulfill()
-        })
+        }
         waitForExpectations(timeout: 3, handler: nil)
     }
 }

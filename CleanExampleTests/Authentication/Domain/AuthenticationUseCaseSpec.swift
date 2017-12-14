@@ -9,31 +9,37 @@
 import XCTest
 @testable import CleanExample
 class AuthenticationUseCaseSpec: XCTestCase {
-    let locator = AuthenticationServiceLocator()
+    var locator: AuthenticationServiceLocator!
+
+    override func setUp() {
+        super.setUp()
+        locator = AuthenticationServiceLocator()
+    }
+    override func tearDown() {
+        super.tearDown()
+        locator = nil
+    }
+
     func testLoginSuccessful() {
         let sut = locator.useCases
         let exp = expectation(description: "testLoginSuccessful")
-        sut.executeLogin(withCredentials: "Juan", password: "1234", onSuccess: { (user) in
-            XCTAssertNotNil(user)
+        let model = LoginModel(userName: "Juan", password: "1234")
+        sut.executeLogin(with: model) { (error) in
+            XCTAssertNil(error)
             exp.fulfill()
-        }, onError: { (error) in
-            XCTFail(error.localizedDescription)
-            exp.fulfill()
-        })
+        }
         waitForExpectations(timeout: 3, handler: nil)
     }
 
     func testLoginFailure() {
         let sut = locator.useCases
         let exp = expectation(description: "testLoginFailure")
-        sut.executeLogin(withCredentials: "", password: "1234", onSuccess: { (user) in
-            XCTFail("User \(user.firstName) should not be here")
-            exp.fulfill()
-        }, onError: { (error) in
+        let model = LoginModel(userName: "", password: "")
+        sut.executeLogin(with: model) { (error) in
             XCTAssertNotNil(error)
-            XCTAssertEqual(error.code, 400)
+            XCTAssertEqual(error?.code, 400)
             exp.fulfill()
-        })
+        }
         waitForExpectations(timeout: 3, handler: nil)
     }
 }

@@ -59,4 +59,15 @@ class LoginViewControllerSpec: XCTestCase {
         sut.onLoginButtonTap((Any).self)
         XCTAssertTrue(presenter.doLoginCalled)
     }
+
+    func testShowHome() {
+        let locator = AuthenticationServiceLocator()
+        let presenter = MockPresenter(locator.useCases)
+        sut = LoginViewController(presenter)
+        sut.loadView()
+
+        sut.showHome()
+        let vc = UIApplication.shared.keyWindow?.rootViewController?.childViewControllers.first
+        XCTAssertTrue(vc is HomeViewController)
+    }
 }

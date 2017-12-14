@@ -10,11 +10,13 @@ import Foundation
 
 class AuthenticationServiceLocator {
     let storageLocator = StorageServiceLocator()
+    let networkConfiguration = NetworkConfiguration()
+
     var restApi: AuthenticationRestApi {
-        return AuthenticationMockApi()
+        return AuthenticationMockApi(networkConfiguration: networkConfiguration)
     }
 
-    var dataSource: AuthenticationMockDataSource {
+    var dataSource: AuthenticationDataSource {
         return AuthenticationMockDataSource(restApi: restApi)
     }
 

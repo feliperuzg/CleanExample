@@ -1,0 +1,11 @@
+os: osx
+language: objective-c
+osx_image: xcode9.1
+before_install:
+  - brew update
+  - brew install swiftformat
+  - brew upgrade swiftlint
+script:
+  - ./run.sh
+rvm:
+  - 2.3.3

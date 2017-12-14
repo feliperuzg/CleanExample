@@ -10,7 +10,7 @@ import UIKit
 
 class LoginPresenter: LoginPresenterProtocol {
     fileprivate let loginService: AuthenticationUseCase
-    weak fileprivate var loginView: LoginViewProtocol?
+    fileprivate weak var loginView: LoginViewProtocol?
 
     init(_ loginService: AuthenticationUseCase) {
         self.loginService = loginService
@@ -21,13 +21,15 @@ class LoginPresenter: LoginPresenterProtocol {
     }
 
     func doLogin(_ user: String, password pass: String) {
-        self.loginView?.showActivityIndicator()
-        loginService.executeLogin(withCredentials: user, password: pass, onSuccess: { [weak self] user in
-            self?.loginView?.hideActivityIndicator()
-            print(user.firstName)
-        }, onError: { [weak self] error in
-            self?.loginView?.hideActivityIndicator()
-            self?.loginView?.showErrorMessage(error)
-        })
+        loginView?.showActivityIndicator()
+        let model = LoginModel(userName: user, password: pass)
+        loginService.executeLogin(with: model) { error in
+            self.loginView?.hideActivityIndicator()
+            if let error = error {
+                self.loginView?.showErrorMessage(error)
+            } else {
+                self.loginView?.showHome()
+            }
+        }
     }
 }

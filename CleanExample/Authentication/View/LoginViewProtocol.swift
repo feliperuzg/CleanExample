@@ -12,4 +12,5 @@ protocol LoginViewProtocol: NSObjectProtocol {
     func showActivityIndicator()
     func hideActivityIndicator()
     func showErrorMessage(_ error: CustomError)
+    func showHome()
 }

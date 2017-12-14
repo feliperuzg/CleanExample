@@ -8,5 +8,5 @@
 
 protocol StorageDataSource {
     func saveAuthToken(_ token: String)
-    func getAuthToken(_ onSuccess: @escaping (String) -> Void)
+    func authToken() -> String
 }

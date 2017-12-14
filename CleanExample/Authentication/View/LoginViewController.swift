@@ -27,8 +27,16 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func onLoginButtonTap(_ sender: Any) {
-        loginPresenter?.doLogin(userName.text!, password: userPassword.text!)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    @IBAction func onLoginButtonTap(_: Any) {
+        view.endEditing(true)
+        if let user = userName.text, let pass = userPassword.text {
+            loginPresenter?.doLogin(user, password: pass)
+        }
     }
 }
 
@@ -44,11 +52,22 @@ extension LoginViewController: LoginViewProtocol {
     }
 
     func showErrorMessage(_ error: CustomError) {
-        alert = UIAlertController(title: error.localizedTitle,
-                                      message: error.localizedDescription,
-                                      preferredStyle: .alert)
+        alert = UIAlertController(
+            title: error.localizedTitle,
+            message: error.localizedDescription,
+            preferredStyle: .alert
+        )
         let aceptar = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
         alert.addAction(aceptar)
         present(alert, animated: true, completion: nil)
+    }
+
+    func showHome() {
+        if let window = UIApplication.shared.keyWindow {
+            let presenter = HomePresenter()
+            let viewController = HomeViewController(presenter)
+            viewController.navigationItem.hidesBackButton = true
+            window.rootViewController = UINavigationController(rootViewController: viewController)
+        }
     }
 }

@@ -7,25 +7,42 @@
 //
 
 import Foundation
+import Alamofire
 
 class AuthenticationMockApi: AuthenticationRestApi {
-    let response = ["firstName": "Juan",
-                    "lastName": "Perez",
-                    "age": 20,
-                    "phone": "12345678",
-                    "email": "example@domain.com",
-                    "address": "Any Street #123"] as [String : Any]
-    let error = CustomError(localizedTitle: "BAD REQUEST", localizedDescription: "BAD REQUEST", code: 400)
-    let token = "asdfghjkl1234567890"
 
-    func executeLogin(withCredentials userName: String, password: String,
-                      onSuccess: @escaping (UserEntity, String) -> Void,
-                      onError: @escaping (CustomError) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            if userName.isEmpty || password.isEmpty {
-                onError(self.error)
+    let networkConfiguration: NetworkConfiguration
+
+    init(networkConfiguration: NetworkConfiguration) {
+        self.networkConfiguration = networkConfiguration
+    }
+
+    func executeLogin(
+        with credentials: LoginEntity,
+        completionHandler: @escaping (TokenEntity?, CustomError?) -> Void
+    ) {
+        guard let url = networkConfiguration.authenticationURL(for: .login) else {
+            completionHandler(nil, CustomError())
+            return
+        }
+        let params: Parameters = [
+            "userName": credentials.userName,
+            "password": credentials.password
+        ]
+        AlamofireSession.execute(url, .post, params) { response in
+            if
+                let data = response.data,
+                let token: TokenEntity = CodableHelper().decodeNetworkObject(object: data),
+                !credentials.userName.isEmpty,
+                !credentials.password.isEmpty {
+                completionHandler(token, nil)
             } else {
-                onSuccess(UserEntity(fromDictionary: self.response), self.token)
+                let error = CustomError(
+                    localizedTitle: "Error",
+                    localizedDescription: "User or password incorrect",
+                    code: 400
+                )
+                completionHandler(nil, error)
             }
         }
     }

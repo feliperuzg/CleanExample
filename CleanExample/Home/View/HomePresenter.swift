@@ -9,20 +9,13 @@
 import Foundation
 
 class HomePresenter: HomePresenterProtocol {
-    fileprivate let homeService: NSObject
-    weak fileprivate var homeView: HomeViewProtocol?
-
-    init(_ homeService: NSObject) {
-        self.homeService = homeService
-    }
+    fileprivate weak var homeView: HomeViewProtocol?
 
     func attachView(_ homeView: HomeViewProtocol) {
         self.homeView = homeView
     }
 
-    func getContacts(
-        onSuccess: @escaping ([Any]) -> Void,
-        onError: @escaping (CustomError) -> Void
-        ) {
+    func getUserInformation() {
+        homeView?.displayUserInformation(user: "Felipe")
     }
 }

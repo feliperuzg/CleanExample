@@ -19,9 +19,7 @@ struct UserDefaultsRepository: StorageRepositoryProtocol {
         datasource.saveAuthToken(token)
     }
 
-    func getAuthToken(_ onSuccess: @escaping (String) -> Void) {
-        datasource.getAuthToken { (token) in
-            onSuccess(token)
-        }
+    func authToken() -> String {
+        return datasource.authToken()
     }
 }

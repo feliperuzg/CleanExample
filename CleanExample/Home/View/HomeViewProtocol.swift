@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HomeViewProtocol: NSObjectProtocol {
-    func displayUserInformation(user: User)
+    func displayUserInformation(user: String)
 }

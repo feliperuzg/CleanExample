@@ -10,14 +10,14 @@ struct AuthenticationUseCase {
     let repository: AuthenticationRepositoryProtocol
     let storageRepository: StorageRepositoryProtocol
 
-    func executeLogin(withCredentials userName: String, password: String,
-                      onSuccess: @escaping (User) -> Void,
-                      onError: @escaping (CustomError) -> Void) {
-        repository.executeLogin(withCredentials: userName, password: password, onSuccess: { (user, token) in
-            self.storageRepository.saveAuthToken(token)
-            onSuccess(user)
-        }, onError: { (error) in
-            onError(error)
-        })
+    func executeLogin(with credentials: LoginModel, completionHandler: @escaping (CustomError?) -> Void) {
+        repository.executeLogin(with: credentials) { token, error in
+            if let token = token {
+                self.storageRepository.saveAuthToken(token.token)
+                completionHandler(nil)
+            } else {
+                completionHandler(error)
+            }
+        }
     }
 }

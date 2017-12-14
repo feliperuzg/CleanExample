@@ -41,4 +41,24 @@ class AuthenticationMockApiSpec: XCTestCase {
         }
         waitForExpectations(timeout: 3, handler: nil)
     }
+
+    func testApiCanHandleRequestWithBadURL() {
+        let exp = expectation(description: "testApiCanHanldeError")
+        let model = LoginEntity(userName: "", password: "")
+        let networkConfiguration = NetworkConfiguration()
+
+        networkConfiguration.networkConfigurationList = "lala"
+        networkConfiguration.prepare()
+
+        sut = AuthenticationMockApi(networkConfiguration: networkConfiguration)
+
+        sut.executeLogin(with: model) { (entity, error) in
+            XCTAssertNotNil(error)
+            XCTAssertEqual(error?.code, CustomError().code)
+            XCTAssertEqual(error?.localizedTitle, CustomError().localizedTitle)
+            XCTAssertEqual(error?.localizedDescription, CustomError().localizedDescription)
+            exp.fulfill()
+        }
+        waitForExpectations(timeout: 3, handler: nil)
+    }
 }

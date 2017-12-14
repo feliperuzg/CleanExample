@@ -10,6 +10,7 @@ import Foundation
 
 class NetworkConfiguration: NSObject {
     private var configurationDictionary: [String: AnyObject]?
+    var networkConfigurationList = NetworkConstants.networkConfigurationList
 
     override init() {
         super.init()
@@ -26,7 +27,7 @@ class NetworkConfiguration: NSObject {
         var format = PropertyListSerialization.PropertyListFormat.xml
         if
             let plistPath = bundle.path(
-                forResource: NetworkConstants.networkConfigurationList,
+                forResource: networkConfigurationList,
                 ofType: NetworkConstants.fileExtension
             ),
             let plistData = FileManager.default.contents(atPath: plistPath),
@@ -37,22 +38,22 @@ class NetworkConfiguration: NSObject {
             ) as? [String: AnyObject] {
             configurationDictionary = dict
         } else {
-            fatalError("Could not get \(NetworkConstants.networkConfigurationList).\(NetworkConstants.fileExtension)")
+            configurationDictionary = nil
         }
     }
 
-    private func endpointFor(domain: Domain, endpoint: String) -> String {
+    private func endpointFor(domain: Domain, endpoint: String) -> String? {
         guard
             let configurationDict = configurationDictionary,
             let dict = configurationDict[domain.rawValue] as? [String: AnyObject],
             let baseURL = dict[NetworkConstants.baseURL] as? String,
             let endpointsDict = dict[NetworkConstants.endpointKey] as? [String: String],
             let endpointURL = endpointsDict[endpoint]
-        else { fatalError("Could not find \(endpoint) endpoint in \(domain)") }
+        else { return nil }
         return "\(baseURL)/\(endpointURL)"
     }
 
-    func authenticationURL(for endpoint: Endpoint.Authentication) -> String {
+    func authenticationURL(for endpoint: Endpoint.Authentication) -> String? {
         return endpointFor(domain: Domain.auth, endpoint: endpoint.rawValue)
     }
 }

@@ -22,4 +22,14 @@ class NetworkConfigurationSpec: XCTestCase {
 
         XCTAssertNotNil(url)
     }
+
+    func testNetworkConfigurationReturnsNil() {
+        sut = NetworkConfiguration()
+        sut.networkConfigurationList = "none"
+        sut.prepare()
+        
+        let url = sut.authenticationURL(for: .login)
+
+        XCTAssertNil(url)
+    }
 }

@@ -25,8 +25,13 @@ class StubServiceTests: XCTestCase {
     }
 
     func testAssertStubOAuthService() {
-        let url = networkConfiguration.authenticationURL(for: .login)
-        var request = URLRequest(url: URL(string: url)!)
+        guard
+            let urlString = networkConfiguration.authenticationURL(for: .login),
+            let url = URL(string: urlString) else {
+                XCTFail("Failed to create url or request")
+                return
+        }
+        var request = URLRequest(url: url)
         request.httpMethod = HTTPMethod.post.description
         XCTAssertTrue(MockingjayProtocol.canInit(with: request))
     }

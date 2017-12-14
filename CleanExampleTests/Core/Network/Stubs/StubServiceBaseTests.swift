@@ -21,4 +21,9 @@ class StubServiceBaseTests: XCTestCase {
         let data = sut.readJSONData(fileName: "LoginEntityData")
         XCTAssertNotNil(data)
     }
+
+    func testBaseReturnsNilWhenFileIsNotFound() {
+        let data = sut.readJSON(fileName: "notAFile")
+        XCTAssertNil(data)
+    }
 }

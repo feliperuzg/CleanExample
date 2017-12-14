@@ -21,7 +21,10 @@ class AuthenticationMockApi: AuthenticationRestApi {
         with credentials: LoginEntity,
         completionHandler: @escaping (TokenEntity?, CustomError?) -> Void
     ) {
-        let url = networkConfiguration.authenticationURL(for: .login)
+        guard let url = networkConfiguration.authenticationURL(for: .login) else {
+            completionHandler(nil, CustomError())
+            return
+        }
         let params: Parameters = [
             "userName": credentials.userName,
             "password": credentials.password

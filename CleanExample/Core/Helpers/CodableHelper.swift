@@ -15,16 +15,14 @@ class CodableHelper {
     func decodeObjectFrom<E: Encodable, D: Decodable>(object: E) -> D? {
         if let data = try? encoder.encode(object), let target = try? decoder.decode(D.self, from: data) {
             return target
-        } else {
-            return nil
         }
+        return nil
     }
 
     func decodeNetworkObject<D: Decodable>(object: Data) -> D? {
         if let target = try? decoder.decode(D.self, from: object) {
             return target
-        } else {
-            return nil
         }
+        return nil
     }
 }

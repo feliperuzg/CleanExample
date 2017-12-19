@@ -13,7 +13,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userPassword: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var activityIndicatorContainer: UIView!
-    fileprivate let locator = AuthenticationServiceLocator()
     fileprivate var loginPresenter: LoginPresenterProtocol?
     var alert: UIAlertController!
 
